@@ -2,7 +2,7 @@
 
 Single-file IELTS writing practice app — open it and start typing. No build, no server.
 
-**Live demo (after enabling GitHub Pages):** `https://<username>.github.io/<repo>/copy-test.html`
+**Live demo (after enabling GitHub Pages):** `https://soheilmohajer-code.github.io/ielts-writing/copy-test.html`
 
 ## Features
 
