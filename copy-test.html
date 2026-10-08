@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Copy Test - IELTS writing practice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Estedad:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============ IELTS on-computer style: flat, formal, single system ============ */
+:root{
+  --bg:#D7D9DD;--sheet:#FFFFFF;--sheet2:#EFF0F2;--ink:#191919;--muted:#5C5C5C;--line:#C4C8CE;
+  --accent:#005B96;--accent-d:#00487A;--accent-ink:#FFFFFF;
+  --head:#141414;--head-mut:#BDBDBD;--head-warn:#FFC861;
+  --warn:#8A5A00;--warn-bg:#FFF3CF;--warn-ink:#5A3D00;
+  --bad:#B00020;--bad-bg:#FBE3E8;--good:#0B6E3F;--good-bg:#E1F2E7;
+  --hatch:rgba(0,91,150,.14);
+  --r:4px;
+  --sans:Arial,"Helvetica Neue",Helvetica,sans-serif;
+  --fa:"Estedad",Arial,Tahoma,sans-serif;
+  box-sizing:border-box;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1116;--sheet:#1A1F27;--sheet2:#131820;--ink:#E9EBF0;--muted:#9AA2B3;--line:#2D3542;
+    --accent:#6FA9DC;--accent-d:#8FC0E8;--accent-ink:#0A1626;
+    --head:#000000;--head-mut:#A9A9A9;--head-warn:#FFC861;
+    --warn:#FFC861;--warn-bg:#3A2C0C;--warn-ink:#FFE1A1;
+    --bad:#FF9AAB;--bad-bg:#471B23;--good:#7BD9A5;--good-bg:#143A26;
+    --hatch:rgba(111,169,220,.18);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1116;--sheet:#1A1F27;--sheet2:#131820;--ink:#E9EBF0;--muted:#9AA2B3;--line:#2D3542;
+  --accent:#6FA9DC;--accent-d:#8FC0E8;--accent-ink:#0A1626;
+  --head:#000000;--head-mut:#A9A9A9;--head-warn:#FFC861;
+  --warn:#FFC861;--warn-bg:#3A2C0C;--warn-ink:#FFE1A1;
+  --bad:#FF9AAB;--bad-bg:#471B23;--good:#7BD9A5;--good-bg:#143A26;
+  --hatch:rgba(111,169,220,.18);
+}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{height:100%;background:var(--bg)}
+body{margin:0;height:100%;display:flex;flex-direction:column;background:var(--bg);color:var(--ink);font:400 15px/1.55 var(--sans)}
+html[lang="fa"] body{font-family:var(--fa);line-height:1.9}
+html[lang="fa"] h1,html[lang="fa"] h2,html[lang="fa"] .btn,html[lang="fa"] .mini,
+html[lang="fa"] .field input,html[lang="fa"] .field select,html[lang="fa"] .check,
+html[lang="fa"] dialog h3{font-family:var(--fa)}
+html[lang="fa"] h1,html[lang="fa"] h2{font-weight:800}
+button{font-family:inherit}
+
+/* header: dark test-centre bar */
+.top{flex:none;background:var(--head);color:#fff;border-bottom:3px solid var(--accent)}
+.top-row{display:flex;align-items:center;gap:14px;min-height:62px;padding:8px 20px}
+.brand{display:flex;align-items:center;gap:12px;direction:ltr}
+.ielts{font-size:23px;font-weight:800;letter-spacing:.14em;color:#fff}
+.vdiv{width:1px;height:30px;background:#4d4d4d;flex:none}
+.section{font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--head-mut);white-space:nowrap}
+html[lang="fa"] .section{letter-spacing:0;font-size:13px}
+.clock-wrap{margin:0 auto;text-align:center;line-height:1.2}
+.clock{display:inline-block;background:#000;border:1px solid #6a6a6a;border-radius:3px;padding:2px 18px;font-size:27px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.04em;color:#fff}
+.clock-note{font-size:11px;color:var(--head-mut);margin-top:3px}
+.top.warn .clock{border-color:var(--head-warn);color:var(--head-warn);animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:.55}}
+.controls{display:flex;align-items:center;gap:8px}
+.who{font-size:13px;color:var(--head-mut);white-space:nowrap}
+.who b{color:#fff}
+.icon-btn{width:36px;height:36px;border-radius:3px;border:1px solid #5c5c5c;background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center}
+.icon-btn:hover{border-color:#fff}
+.icon-btn svg{width:18px;height:18px}
+#themeBtn .sun{display:none}
+:root[data-theme="dark"] #themeBtn .moon{display:none}
+:root[data-theme="dark"] #themeBtn .sun{display:block}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) #themeBtn .moon{display:none}
+  :root:not([data-theme="light"]) #themeBtn .sun{display:block}
+}
+.lang-btn{height:36px;padding:0 12px;border-radius:3px;border:1px solid #5c5c5c;background:transparent;color:#fff;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px}
+html[lang="fa"] .lang-btn{font-family:var(--fa)}
+.lang-btn:hover{border-color:#fff}
+.lang-btn svg{width:15px;height:15px}
+.track{position:relative;height:5px;background:#000}
+.zone{position:absolute;top:0;right:0;bottom:0;border-left:2px solid var(--head-warn);background:repeating-linear-gradient(135deg,rgba(255,200,97,.25) 0 6px,transparent 6px 12px)}
+.fill{position:absolute;top:0;bottom:0;left:0;width:0;background:var(--accent)}
+.top.warn .fill{background:var(--head-warn)}
+.alert{background:var(--warn-bg);color:var(--warn-ink);font-weight:700;text-align:center;padding:8px 16px;font-size:14px}
+
+/* setup: candidate details screen */
+.view{flex:1;min-height:0;overflow-y:auto}
+.wrap{max-width:720px;margin:0 auto;padding:40px 20px 60px}
+.wrap.wide{max-width:880px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--accent);margin-bottom:10px}
+html[lang="fa"] .eyebrow{letter-spacing:0;font-size:13px}
+h1{font-size:30px;line-height:1.3;font-weight:700;margin:0 0 10px}
+.grad{color:var(--accent)}
+.lead{font-size:15.5px;color:var(--muted);max-width:62ch;margin:0 0 24px}
+html[lang="fa"] .lead{line-height:2}
+h2{font-size:24px;line-height:1.35;font-weight:700;margin:0 0 8px}
+h2.good{color:var(--good)}
+.card{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+html[lang="fa"] .lbl{letter-spacing:0;text-transform:none;font-size:13.5px}
+.paste{display:block;width:100%;min-height:190px;resize:vertical;padding:12px 14px;background:var(--sheet);color:var(--ink);border:1px solid #9AA0A8;border-radius:3px;font-size:16px;line-height:1.7}
+html[lang="fa"] .paste{font-family:var(--fa);line-height:2;font-size:16px}
+.paste:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:var(--accent)}
+.meta{margin-top:6px;font-size:13px;color:var(--muted)}
+.settings{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;margin:18px 0 20px}
+@media (max-width:560px){.settings{grid-template-columns:1fr}}
+.field label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:5px}
+html[lang="fa"] .field label{font-size:13.5px}
+.field input,.field select{width:100%;padding:9px 10px;background:var(--sheet);color:var(--ink);border:1px solid #9AA0A8;border-radius:3px;font-size:15px}
+html[lang="fa"] .field input,html[lang="fa"] .field select{font-family:var(--fa)}
+.field input:focus,.field select:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:var(--accent)}
+.check{grid-column:1/-1;display:flex;align-items:center;gap:8px;font-size:14px;padding:2px 0;cursor:pointer}
+.check input{width:16px;height:16px;accent-color:var(--accent);flex:none}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.btn{font-size:15px;font-weight:700;padding:12px 30px;border-radius:3px;border:1px solid transparent;cursor:pointer}
+.primary{background:var(--accent);color:var(--accent-ink)}
+.primary:hover:not(:disabled){background:var(--accent-d)}
+.primary:disabled{opacity:.45;cursor:not-allowed}
+.ghost{background:var(--sheet);color:var(--ink);border-color:#9AA0A8}
+.ghost:hover{border-color:var(--ink)}
+.controls .btn{padding:8px 18px;font-size:14px}
+.btn:focus-visible,.icon-btn:focus-visible,.lang-btn:focus-visible,.mini:focus-visible,input:focus-visible,.paste:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.notes{margin:24px 0 0;padding-inline-start:22px;color:var(--muted);font-size:14px;list-style:decimal}
+.notes li{margin:5px 0;padding-inline-start:4px}
+html[lang="fa"] .notes li{line-height:1.9}
+.foot{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);text-align:center}
+html[lang="fa"] .foot{line-height:1.9}
+
+/* exam: task panes */
+#vExam{padding:12px}
+.exam{display:grid;grid-template-columns:1fr 1fr;gap:12px;height:100%}
+.exam,.passage,.typed,.diff{direction:ltr;text-align:left}
+.pane{display:flex;flex-direction:column;min-height:0;min-width:0;background:var(--sheet);border:1px solid #9AA0A8;border-radius:3px;overflow:hidden}
+.pane.write:focus-within{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.pane-head{flex:none;display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--sheet2);border-bottom:1px solid var(--line);padding:8px 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+html[lang="fa"] .pane-head{letter-spacing:0;text-transform:none;font-size:13.5px}
+.pane-head .aside{font-weight:400;letter-spacing:0;text-transform:none}
+.cname{color:var(--accent);font-weight:700;letter-spacing:0;text-transform:none}
+.para-nav{display:flex;align-items:center;gap:10px;background:var(--sheet);border:1px solid var(--line);border-radius:3px;padding:8px 12px;margin-bottom:12px;font-size:14px}
+.para-nav .grp{display:flex;gap:6px}
+.mini{font-size:13px;font-weight:700;min-width:34px;padding:6px 10px;border:1px solid #9AA0A8;border-radius:3px;background:var(--sheet);color:var(--ink);cursor:pointer}
+.mini:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+.mini:disabled{opacity:.4;cursor:not-allowed}
+.mini.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.pdots{display:flex;gap:6px;flex-wrap:wrap}
+#paraLabel{margin-inline-start:auto;font-weight:700;font-size:13.5px;white-space:nowrap}
+.pane-body{flex:1;min-height:0;overflow:auto;padding:20px 22px}
+.passage p{font-size:17px;line-height:1.75;margin:0 0 1em}
+.typed{display:block;width:100%;height:100%;resize:none;border:0;outline:0;background:transparent;color:var(--ink);padding:20px 22px;font-size:17px;line-height:1.75}
+@media (max-width:900px){
+  .exam{grid-template-columns:1fr;height:auto;min-height:100%}
+  .typed{min-height:320px}
+}
+@media (max-width:700px){
+  .section,.who{display:none}
+  .clock{font-size:23px;padding:2px 12px}
+  .top-row{padding:8px 12px;gap:10px}
+}
+
+/* result: completion report */
+.result-hero{display:flex;gap:22px;align-items:center;background:var(--sheet);border:1px solid var(--line);border-inline-start:4px solid var(--accent);border-radius:3px;padding:20px 22px;margin-bottom:14px}
+.ring{position:relative;width:110px;height:110px;flex:none}
+.ring svg{transform:rotate(-90deg)}
+.ring .bgc{fill:none;stroke:var(--line);stroke-width:10}
+.ring .fgc{fill:none;stroke:var(--accent);stroke-width:10}
+.ring-num{position:absolute;inset:0;display:grid;place-items:center;font-size:22px;font-weight:800;font-variant-numeric:tabular-nums}
+.result-hero .lead{margin:0;font-size:15px}
+.cand{margin-top:10px;display:inline-block;font-size:13px;font-weight:700;color:var(--accent);border:1px solid var(--line);background:var(--sheet2);padding:4px 12px;border-radius:20px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 14px}
+@media (max-width:640px){.stats{grid-template-columns:1fr 1fr}}
+.stat{background:var(--sheet);border:1px solid var(--line);border-radius:3px;padding:14px 16px}
+.stat .v{display:block;font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.15}
+.stat .l{font-size:12px;color:var(--muted)}
+#stAcc{color:var(--accent)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--muted);margin-bottom:12px}
+.chip{background:var(--sheet);border:1px solid var(--line);border-radius:3px;padding:5px 10px}
+.m{background:var(--bad-bg);color:var(--bad);font-weight:700;padding:0 4px}
+.x{background:var(--warn-bg);color:var(--warn);text-decoration:line-through;font-weight:700;padding:0 4px}
+.diff{background:var(--sheet);border:1px solid var(--line);border-radius:3px;padding:20px 22px;font-size:16.5px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;margin-bottom:14px}
+.para-card{background:var(--sheet);border:1px solid var(--line);border-inline-start:4px solid var(--accent);border-radius:3px;padding:16px 18px;margin-bottom:12px}
+.para-card.exact{border-inline-start-color:var(--good)}
+.para-card h4{margin:0 0 4px;font-size:15px}
+.para-card .sub{font-size:13px;color:var(--muted);margin-bottom:10px}
+.para-card .diff{margin:0;background:var(--sheet2);font-size:15.5px;padding:14px 16px}
+
+dialog{background:var(--sheet);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:26px;width:min(430px,92vw)}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+dialog h3{margin:0 0 8px;font-size:20px;font-weight:700}
+dialog p{margin:0 0 18px;color:var(--muted);font-size:14.5px}
+html[lang="fa"] dialog p{line-height:1.9}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* candidate record */
+.hist{margin-top:26px}
+.hist h3{font-size:17px;font-weight:800;margin:0 0 12px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.goal{font-size:12.5px;font-weight:700;color:var(--accent)}
+.htable-wrap{overflow-x:auto}
+.htable{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--sheet);border:1px solid var(--line)}
+.htable th{background:var(--sheet2);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:start}
+html[lang="fa"] .htable th{letter-spacing:0;text-transform:none;font-size:13px}
+.htable th,.htable td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:start;white-space:nowrap}
+.htable td.acc{font-weight:700;font-variant-numeric:tabular-nums}
+.htable tr.goalmet td.acc{color:var(--good)}
+.htable tr:last-child td{border-bottom:0}
+.empty{padding:14px;color:var(--muted);font-size:13.5px;border:1px dashed var(--line);border-radius:3px;background:var(--sheet);margin-top:12px}
+html[lang="fa"] .empty{line-height:1.9}
+.hist .actions{margin-top:12px}
+.att{margin-top:10px;font-size:13px;color:var(--muted)}
+
+/* side drawer */
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:40}
+.drawer{position:fixed;top:0;bottom:0;inset-inline-start:0;width:min(340px,88vw);background:var(--sheet);border-inline-end:1px solid var(--line);z-index:50;display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.3)}
+.dw-head{display:flex;gap:12px;align-items:center;padding:16px;border-bottom:1px solid var(--line);background:var(--sheet2)}
+.avatar{width:54px;height:54px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:22px;font-weight:800;flex:none;overflow:hidden}
+.avatar svg{width:30px;height:30px}
+.dw-head>div:nth-child(2){min-width:0;flex:1}
+.dw-name{font-weight:800;font-size:16px;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dw-name.dw-no{color:var(--muted);font-weight:400;font-size:13.5px}
+.dw-goal{font-size:12.5px;color:var(--accent);font-weight:700}
+.dw-x{margin-inline-start:auto;border-color:var(--line);color:var(--ink);flex:none}
+.dw-x:hover{border-color:var(--accent)}
+.dw-body{flex:1;overflow-y:auto;padding:16px}
+.dw-sec{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:4px 0 10px}
+html[lang="fa"] .dw-sec{letter-spacing:0;text-transform:none;font-size:13.5px}
+.dw-stats{grid-template-columns:1fr 1fr;margin-bottom:18px}
+.dw-stats .stat{padding:10px 12px}
+.dw-stats .stat .v{font-size:20px}
+.dw-list{display:grid;gap:8px}
+.dw-item{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:3px;padding:8px 10px;font-size:13px;background:var(--sheet)}
+.dw-item .n{font-weight:800;color:var(--accent)}
+.dw-item small{color:var(--muted)}
+.dw-item .a{margin-inline-start:auto;font-weight:800;font-variant-numeric:tabular-nums}
+.dw-actions{padding:12px 16px;border-top:1px solid var(--line);display:flex;gap:8px}
+.dw-actions .btn{flex:1;padding:10px 0;font-size:14px}
+
+/* passage bank */
+.bank{margin-bottom:16px}
+.bank-list{display:grid;gap:8px;margin-top:8px}
+.bank-item{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:3px;padding:8px 12px;background:var(--sheet2)}
+.bank-tx{min-width:0;flex:1}
+.bank-h{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bank-m{font-size:12px;color:var(--muted)}
+.bank-acts{display:flex;gap:6px;flex:none}
+.mini.danger:hover{border-color:var(--bad);color:var(--bad)}
+.hint{font-size:12.5px;color:var(--muted);margin-top:6px}
+html[lang="fa"] .hint{line-height:1.9}
+
+/* memorize phase */
+.mem-card{background:var(--sheet);border:1px solid var(--line);border-radius:3px;padding:22px 24px;margin:18px 0}
+.mem-card .passage p{font-size:18px}
+.mem-meta{margin-top:10px;font-size:13px;color:var(--muted)}
+.exam.solo{grid-template-columns:1fr;max-width:780px;margin:0 auto;width:100%}
+.exam.solo .pane:first-child{display:none}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="top-row">
+    <div class="brand"><span class="ielts">IELTS</span><span class="vdiv" aria-hidden="true"></span><span class="section" data-i18n="brandSub">Copy Test · Writing practice</span></div>
+    <div class="clock-wrap" id="clockWrap" hidden>
+      <div class="clock" id="clock" role="timer">40:00</div>
+      <div class="clock-note" id="clockNote"></div>
+    </div>
+    <div class="controls">
+      <button class="icon-btn" id="menuBtn" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <span class="who" id="whoWrap" hidden><span data-i18n="cand">Candidate</span>: <b id="whoName"></b></span>
+      <button class="icon-btn" id="themeBtn" data-i18n-title="themeTitle" title="Change theme" aria-label="Theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="lang-btn" id="langBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg><span id="langTxt">FA</span></button>
+      <button class="btn primary" id="finishBtn" hidden data-i18n="finish">Finish</button>
+    </div>
+  </div>
+  <div class="track" id="track" hidden><div class="zone" id="zone"></div><div class="fill" id="fill"></div></div>
+  <div class="alert" id="alert" role="status" hidden></div>
+</header>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Panel" hidden>
+  <div class="dw-head">
+    <div class="avatar"><svg id="dwAvatar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg><span id="dwInit" hidden></span></div>
+    <div><div class="dw-name" id="dwName"></div><div class="dw-goal" id="dwGoalLine"></div></div>
+    <button class="icon-btn dw-x" id="dwClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="dw-body">
+    <div class="dw-sec" data-i18n="histTitle">My record</div>
+    <div class="stats dw-stats">
+      <div class="stat"><span class="v" id="dwAttempts">0</span><span class="l" data-i18n="hsAttempts">Exams taken</span></div>
+      <div class="stat"><span class="v" id="dwAvg">–</span><span class="l" data-i18n="hsAvg">Average accuracy</span></div>
+      <div class="stat"><span class="v" id="dwBest">–</span><span class="l" data-i18n="hsBest">Best accuracy</span></div>
+      <div class="stat"><span class="v" id="dwErr">0</span><span class="l" data-i18n="hsErr">Total mistakes</span></div>
+    </div>
+    <div class="dw-sec" data-i18n="bankTitle">Passage bank</div>
+    <div class="bank-list" id="bankList"></div>
+    <div class="empty" id="dwBankEmpty" data-i18n="bankEmpty">No saved passages yet — save one after your next exam.</div>
+    <div class="dw-sec" data-i18n="dwRecent">Recent attempts</div>
+    <div class="dw-list" id="dwList"></div>
+    <div class="empty" id="dwEmpty" data-i18n="hsEmpty">No exams yet — your attempts will appear here.</div>
+  </div>
+  <div class="dw-actions">
+    <button class="btn primary" id="dwNew" data-i18n="dwNew">New exam</button>
+    <button class="btn ghost" id="dwClear" data-i18n="hsClear">Clear history</button>
+  </div>
+</aside>
+
+<main class="view" id="vSetup">
+  <div class="wrap">
+    <div class="eyebrow"><span data-i18n="eyebrow">IELTS WRITING LAB</span></div>
+    <h1><span data-i18n="h1a">Type it back</span> <span class="grad" data-i18n="h1b">exactly.</span></h1>
+    <p class="lead" data-i18n="lead">Paste your passage, choose the paragraph count, copy it out against the clock — full passage or paragraph-by-paragraph — then see every place your text differs from the original.</p>
+    <div class="card">
+    <label class="lbl" for="paste" data-i18n="passageLbl">Passage</label>
+    <textarea id="paste" class="paste" data-i18n-ph="pastePh" placeholder="Paste the passage here" spellcheck="false"></textarea>
+    <div class="meta" id="meta" aria-live="polite">0 paragraphs, 0 words</div>
+    <div class="hint" data-i18n="bankHint">Tip: your saved passages live in the ☰ menu.</div>
+    <div class="settings">
+      <div class="field"><label for="pcount" data-i18n="fCount">Expected paragraphs</label><input id="pcount" type="number" min="1" max="20" value="4"></div>
+      <div class="field"><label for="mode" data-i18n="fMode">Exam mode</label><select id="mode"><option value="full" data-i18n="optFull">Full passage</option><option value="para" data-i18n="optPara">Paragraph by paragraph</option></select></div>
+      <div class="field"><label for="pname" data-i18n="fName">Your name</label><input id="pname" type="text" maxlength="40" data-i18n-ph="namePh" placeholder="e.g. Sara" autocomplete="name"></div>
+      <div class="field"><label for="pgoal" data-i18n="fGoal">Accuracy goal %</label><input id="pgoal" type="number" min="50" max="100" value="95"></div>
+      <div class="field"><label for="dur" data-i18n="fDur">Exam length, minutes</label><input id="dur" type="number" min="1" max="180" value="40"></div>
+      <div class="field"><label for="warn" data-i18n="fWarn">Soft alert with minutes left</label><input id="warn" type="number" min="0" max="179" value="10"></div>
+      <label class="check"><input type="checkbox" id="ign"> <span data-i18n="cIgn">Ignore extra spaces</span></label>
+      <label class="check"><input type="checkbox" id="ignCase"> <span data-i18n="cCase">Ignore case (Aa = aa)</span></label>
+      <label class="check"><input type="checkbox" id="ignPunct"> <span data-i18n="cPunct">Ignore punctuation</span></label>
+      <label class="check"><input type="checkbox" id="hideP"> <span data-i18n="cMem">Hide passage while typing (from memory)</span></label>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="startBtn" disabled data-i18n="start">Start exam</button>
+      <button class="btn ghost" id="testSound" data-i18n="sound">Play alert sound</button>
+    </div>
+    </div>
+    <section class="hist" id="histPanel" aria-label="Record">
+      <h3><span data-i18n="histTitle">My record</span> <span class="goal" id="goalLine"></span></h3>
+      <div class="stats">
+        <div class="stat"><span class="v" id="hsAttempts">0</span><span class="l" data-i18n="hsAttempts">Exams taken</span></div>
+        <div class="stat"><span class="v" id="hsAvg">–</span><span class="l" data-i18n="hsAvg">Average accuracy</span></div>
+        <div class="stat"><span class="v" id="hsBest">–</span><span class="l" data-i18n="hsBest">Best accuracy</span></div>
+        <div class="stat"><span class="v" id="hsErr">0</span><span class="l" data-i18n="hsErr">Total mistakes</span></div>
+      </div>
+      <div class="htable-wrap"><table class="htable" id="histTable" hidden>
+        <thead><tr><th data-i18n="hsDate">Date</th><th data-i18n="hsMode">Mode</th><th data-i18n="hsPara">Paras</th><th data-i18n="hsAcc">Accuracy</th><th data-i18n="hsErr2">Missed / Extra</th><th data-i18n="hsTime">Time</th></tr></thead>
+        <tbody id="histBody"></tbody>
+      </table></div>
+      <div class="empty" id="histEmpty" data-i18n="hsEmpty">No exams yet — your attempts will appear here.</div>
+      <div class="actions"><button class="btn ghost" id="clearHist" hidden data-i18n="hsClear">Clear history</button></div>
+    </section>
+    <ul class="notes">
+      <li data-i18n="n1">Pasting is turned off in the typing box.</li>
+      <li data-i18n="n2">Curly quotes in the passage are converted to straight quotes so you can type them.</li>
+      <li data-i18n="n3">One Enter or several between paragraphs both count as a paragraph break.</li>
+      <li data-i18n="n4">Paragraph-by-paragraph mode shows one paragraph at a time and scores each one separately.</li>
+      <li data-i18n="n5">For highest correction precision leave all “Ignore …” boxes unchecked.</li>
+    </ul>
+    <div class="foot" data-i18n="foot">Built for focused IELTS writing practice — your text never leaves this browser.</div>
+  </div>
+</main>
+
+<main class="view" id="vMem" hidden>
+  <div class="wrap">
+    <div class="eyebrow"><span data-i18n="eyebrow">IELTS WRITING LAB</span></div>
+    <h1 data-i18n="memTitle">Memorize the passage.</h1>
+    <p class="lead" data-i18n="memLead">Read it carefully. When you are ready, the passage will be hidden and you will write it back from memory against the clock.</p>
+    <div class="mem-card"><div class="passage" id="memPassage"></div><div class="mem-meta"><span id="memWords">0</span> <span data-i18n="words">words</span></div></div>
+    <div class="actions">
+      <button class="btn primary" id="memStart" data-i18n="memStart">I'm ready — hide it and start</button>
+      <button class="btn ghost" id="memBack" data-i18n="memBack">Back</button>
+    </div>
+  </div>
+</main>
+
+<main class="view" id="vExam" hidden>
+  <div class="para-nav" id="paraNav" hidden>
+    <div class="grp"><button class="mini" id="prevPara" data-i18n="prev">Prev</button><button class="mini" id="nextPara" data-i18n="next">Next</button></div>
+    <div class="pdots" id="pdots"></div>
+    <div id="paraLabel"></div>
+  </div>
+  <div class="exam">
+    <section class="pane" aria-label="Passage">
+      <div class="pane-head"><span data-i18n="paneP">Passage</span><span class="aside"><span id="pWords">0</span> <span data-i18n="words">words</span></span></div>
+      <div class="pane-body passage" id="passage"></div>
+    </section>
+    <section class="pane write" aria-label="Your copy">
+      <div class="pane-head"><span><span data-i18n="paneC">Your copy</span><span class="cname" id="copyName"></span></span><span class="aside"><span id="tHint"></span> <b id="tWords">0</b> <span data-i18n="wordsTyped">words typed</span></span></div>
+      <textarea id="typed" class="typed" aria-label="Your copy" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" lang="en" data-i18n-ph="typedPh" placeholder="Start typing the passage here"></textarea>
+    </section>
+  </div>
+</main>
+
+<main class="view" id="vResult" hidden>
+  <div class="wrap wide">
+    <div class="result-hero">
+      <div class="ring" role="img" aria-label="Accuracy"><svg viewBox="0 0 120 120" width="110" height="110"><circle class="bgc" cx="60" cy="60" r="52"/><circle class="fgc" id="ringFg" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="326.7"/></svg><div class="ring-num" id="ringNum">0%</div></div>
+      <div><h2 id="verdict"></h2><p class="lead" id="verdictSub"></p><div class="cand" id="candLine" hidden></div><div class="att" id="attLine" hidden></div></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="v" id="stTime"></span><span class="l" data-i18n="stTime">Time used</span></div>
+      <div class="stat"><span class="v" id="stAcc"></span><span class="l" data-i18n="stAcc">Accuracy</span></div>
+      <div class="stat"><span class="v" id="stWords"></span><span class="l" data-i18n="stWords">Words typed / passage</span></div>
+      <div class="stat"><span class="v" id="stPara"></span><span class="l" data-i18n="stPara">Paragraphs exact</span></div>
+    </div>
+    <div class="legend"><span class="chip"><span class="m" data-i18n="legM">Missed</span> <span data-i18n="legMT">in the passage, not in your text</span></span><span class="chip"><span class="x" data-i18n="legX">Extra</span> <span data-i18n="legXT">in your text, not in the passage</span></span></div>
+    <div id="paraResults"></div>
+    <div class="diff" id="diff"></div>
+    <div class="actions">
+      <button class="btn primary" id="retry" data-i18n="retry">Try this passage again</button>
+      <button class="btn ghost" id="retryPara" hidden>Retry weakest paragraph</button>
+      <button class="btn ghost" id="saveBank" data-i18n="bankSave">Save this passage</button>
+      <button class="btn ghost" id="fresh" data-i18n="fresh">Use a new passage</button>
+    </div>
+  </div>
+</main>
+
+<dialog id="confirm">
+  <h3 data-i18n="cfTitle">Finish and check?</h3>
+  <p><span data-i18n="cfA">You still have</span> <b id="left"></b> <span data-i18n="cfB">left. Your text will be compared with the passage right away.</span></p>
+  <div class="actions">
+    <button class="btn ghost" id="keep" data-i18n="cfKeep">Keep typing</button>
+    <button class="btn primary" id="yes" data-i18n="cfYes">Check my text</button>
+  </div>
+</dialog>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s);
+const KEY='copytest:v2',OLDKEY='copytest:v1';
+const S={phase:'setup',draft:'',source:'',typed:'',paraTyped:[],curPara:0,weakestPara:-1,durationMin:40,warnMin:10,expectedParas:4,mode:'full',ign:false,ignCase:false,ignPunct:false,lang:'en',theme:null,name:'',goal:95,hideP:false,startedAt:0,endAt:0,warned:false,usedSec:0,timeUp:false};
+let tickId=0,audio=null,alertT=0,hintT=0;
+
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const load=()=>{try{
+  const o=localStorage.getItem(OLDKEY);
+  const r=localStorage.getItem(KEY)||o;
+  if(r)Object.assign(S,JSON.parse(r));
+  if(!Array.isArray(S.paraTyped))S.paraTyped=[];
+  if(typeof S.curPara!=='number')S.curPara=0;
+  if(typeof S.goal!=='number')S.goal=95;
+}catch(e){}};
+
+/* history (local) */
+const HKEY='copytest:history:v1';
+const loadHist=()=>{try{const r=localStorage.getItem(HKEY);const a=r?JSON.parse(r):[];return Array.isArray(a)?a:[]}catch(e){return[]}};
+const saveHist=a=>{try{localStorage.setItem(HKEY,JSON.stringify(a.slice(-100)))}catch(e){}};
+
+/* passage bank */
+const BKEY='copytest:bank:v1';
+const loadBank=()=>{try{const r=localStorage.getItem(BKEY);const a=r?JSON.parse(r):[];return Array.isArray(a)?a:[]}catch(e){return[]}};
+const saveBank=a=>{try{localStorage.setItem(BKEY,JSON.stringify(a.slice(0,30)))}catch(e){}};
+
+/* text helpers */
+const norm=(t,sp)=>{
+  t=t.replace(/[‘’‛]/g,"'").replace(/[“”]/g,'"').replace(/ /g,' ')
+     .replace(/\r\n?/g,'\n').replace(/[ \t]*\n\s*/g,'\n').trim();
+  return sp?t.replace(/[ \t]+/g,' '):t;
+};
+const parasOf=t=>t? t.split('\n'): [];
+const compareText=t=>{
+  t=norm(t,S.ign);
+  if(S.ignCase)t=t.toLowerCase();
+  if(S.ignPunct)t=t.replace(/[^\s\p{L}\p{N}]+/gu,'').replace(/[ \t]+/g,' ').replace(/[ \t]*\n\s*/g,'\n').trim();
+  return t;
+};
+const wc=t=>t.trim()?t.trim().split(/\s+/).length:0;
+const mmss=s=>{s=Math.max(0,Math.ceil(s));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')};
+const FA={paragraph:'پاراگراف',word:'کلمه',minute:'دقیقه',difference:'اختلاف'};
+const plural=(n,w)=>{
+  if(S.lang==='fa')return n+' '+(FA[w]||w);
+  return n+' '+w+(n===1?'':'s');
+};
+/* ---------- i18n ---------- */
+const I18N={
+en:{brandSub:'Copy Test · Writing practice',eyebrow:'IELTS WRITING LAB',h1a:'Type it back',h1b:'exactly.',lead:'Paste your passage, choose the paragraph count, copy it out against the clock — full passage or paragraph-by-paragraph — then see every place your text differs from the original.',passageLbl:'Passage',pastePh:'Paste the passage here',fCount:'Expected paragraphs',fMode:'Exam mode',optFull:'Full passage',optPara:'Paragraph by paragraph',fDur:'Exam length, minutes',fWarn:'Soft alert with minutes left',cIgn:'Ignore extra spaces',cCase:'Ignore case (Aa = aa)',cPunct:'Ignore punctuation',cMem:'Hide passage while typing (from memory)',memTitle:'Memorize the passage.',memLead:'Read it carefully. When you are ready, the passage will be hidden and you will write it back from memory against the clock.',memStart:"I'm ready — hide it and start",memBack:'Back',start:'Start exam',sound:'Play alert sound',n1:'Pasting is turned off in the typing box.',n2:'Curly quotes in the passage are converted to straight quotes so you can type them.',n3:'One Enter or several between paragraphs both count as a paragraph break.',n4:'Paragraph-by-paragraph mode shows one paragraph at a time and scores each one separately.',n5:'For highest correction precision leave all “Ignore …” boxes unchecked.',foot:'Built for focused IELTS writing practice — your text never leaves this browser.',fName:'Your name',namePh:'e.g. Sara',cand:'Candidate',fGoal:'Accuracy goal %',histTitle:'My record',hsAttempts:'Exams taken',hsAvg:'Average accuracy',hsBest:'Best accuracy',hsErr:'Total mistakes',hsDate:'Date',hsMode:'Mode',hsPara:'Paras',hsAcc:'Accuracy',hsErr2:'Missed / Extra',hsTime:'Time',hsEmpty:'No exams yet — your attempts will appear here.',hsClear:'Clear history',hsSure:'Click again to confirm',dwRecent:'Recent attempts',dwNew:'New exam',dwNoName:'No name yet',bankTitle:'Passage bank',bankEmpty:'No saved passages yet — save one after your next exam.',bankUse:'Use',bankDel:'Delete',bankSave:'Save this passage',bankSaved:'Saved in bank ✓',bankAsk:'Title for this passage:',bankRename:'Click to rename',bankHint:'Tip: your saved passages live in the ☰ menu.',finish:'Finish',paneP:'Passage',paneC:'Your copy',words:'words',wordsTyped:'words typed',typedPh:'Start typing the passage here',prev:'Prev',next:'Next',stTime:'Time used',stAcc:'Accuracy',stWords:'Words typed / passage',stPara:'Paragraphs exact',legM:'Missed',legMT:'in the passage, not in your text',legX:'Extra',legXT:'in your text, not in the passage',retry:'Try this passage again',fresh:'Use a new passage',cfTitle:'Finish and check?',cfA:'You still have',cfB:'left. Your text will be compared with the passage right away.',cfKeep:'Keep typing',cfYes:'Check my text',themeTitle:'Change theme',practice:'Practice this paragraph',exactMark:'Exact ✓',title:'Copy Test - IELTS writing practice'},
+fa:{brandSub:'کپی‌تست · تمرین رایتینگ',eyebrow:'کارگاه رایتینگ آیلتس',h1a:'متن را دقیقاً',h1b:'مثل خودش تایپ کن.',lead:'متت را بچسبان، تعداد پاراگراف را مشخص کن و با زمان‌سنج تمرین کن — کل متن یا پاراگراف‌به‌پاراگراف — بعد همه اختلاف‌ها را با دقت بالا ببین.',passageLbl:'متن',pastePh:'متن را اینجا بچسبان…',fCount:'تعداد پاراگراف مورد انتظار',fMode:'حالت آزمون',optFull:'کل متن',optPara:'پاراگراف به پاراگراف',fDur:'مدت آزمون (دقیقه)',fWarn:'هشدار با چند دقیقه مانده',cIgn:'نادیده گرفتن فاصله‌های اضافه',cCase:'نادیده گرفتن بزرگی و کوچکی حروف',cPunct:'نادیده گرفتن علائم نگارشی',cMem:'مخفی کردن متن موقع تایپ (از حفظ بنویسم)',memTitle:'متن را حفظ کن.',memLead:'متن را با دقت بخوان. وقتی آماده شدی، متن مخفی می‌شود و باید از حفظ و با زمان‌سنج بنویسی.',memStart:'حفظم شد — شروع کن',memBack:'برگشت',start:'شروع آزمون',sound:'پخش صدای هشدار',n1:'چسباندن (Paste) داخل کادر تایپ غیرفعال است.',n2:'کوتیشن‌های خمیده متن به ساده تبدیل می‌شوند تا راحت تایپ کنی.',n3:'یک یا چند Enter بین پاراگراف‌ها، هر دو یک پاراگراف حساب می‌شوند.',n4:'حالت پاراگراف‌به‌پاراگراف هر بار یک پاراگراف نشان می‌دهد و جدا نمره می‌دهد.',n5:'برای بالاترین دقت تصحیح، هر سه گزینه «نادیده گرفتن» را خاموش بگذار.',foot:'ساخته‌شده برای تمرین متمرکز رایتینگ آیلتس — متنت هرگز از این مرورگر خارج نمی‌شود.',fName:'نام شما',namePh:'مثلاً سارا',cand:'داوطلب',fGoal:'هدف دقت ٪',histTitle:'کارنامه من',hsAttempts:'تعداد آزمون',hsAvg:'میانگین دقت',hsBest:'بهترین دقت',hsErr:'مجموع غلط‌ها',hsDate:'تاریخ',hsMode:'حالت',hsPara:'پاراگراف',hsAcc:'دقت',hsErr2:'جاافتاده / اضافه',hsTime:'زمان',hsEmpty:'هنوز آزمونی ثبت نشده — تلاش‌هایت اینجا می‌آید.',hsClear:'پاک کردن کارنامه',hsSure:'برای تأیید دوباره بزن',dwRecent:'تلاش‌های اخیر',dwNew:'آزمون جدید',dwNoName:'هنوز اسم وارد نشده',bankTitle:'بانک متن',bankEmpty:'هنوز متنی ذخیره نشده — بعد از آزمون بعدی یکی ذخیره کن.',bankUse:'استفاده',bankDel:'حذف',bankSave:'ذخیره این متن',bankSaved:'در بانک ذخیره شد ✓',bankAsk:'برای این متن یه عنوان بنویس:',bankRename:'برای تغییر نام بزن',bankHint:'نکته: متن‌های ذخیره‌شده‌ات توی منوی ☰ هست.',finish:'اتمام',paneP:'متن',paneC:'متن تو',words:'کلمه',wordsTyped:'کلمه تایپ شده',typedPh:'از اینجا شروع به تایپ کن…',prev:'قبلی',next:'بعدی',stTime:'زمان استفاده‌شده',stAcc:'دقت',stWords:'کلمات تایپ‌شده / متن',stPara:'پاراگراف‌های بی‌نقص',legM:'جاافتاده',legMT:'در متن هست ولی تو ننوشتی',legX:'اضافه',legXT:'تو نوشتی ولی در متن نیست',retry:'تلاش دوباره با همین متن',fresh:'متن جدید',cfTitle:'تمام کنی و تصحیح بشه؟',cfA:'هنوز',cfB:'وقت داری. متنت همین حالا با متن اصلی مقایسه می‌شود.',cfKeep:'ادامه می‌دم',cfYes:'تصحیح کن',themeTitle:'تغییر تم',practice:'تمرین همین پاراگراف',exactMark:'بی‌نقص ✓',title:'کپی‌تست — تمرین رایتینگ آیلتس'}};
+const T=k=>(I18N[S.lang]&&I18N[S.lang][k])||I18N.en[k]||k;
+function applyI18n(){
+  document.documentElement.lang=S.lang;
+  document.documentElement.dir=S.lang==='fa'?'rtl':'ltr';
+  document.title=T('title');
+  document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=T(el.dataset.i18n)});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{el.placeholder=T(el.dataset.i18nPh)});
+  document.querySelectorAll('[data-i18n-title]').forEach(el=>{el.title=T(el.dataset.i18nTitle)});
+  $('#langTxt').textContent=S.lang==='fa'?'EN':'FA';
+  refreshMeta();renderHistory();renderBank();
+  if(S.phase==='exam'){updateParaUI();tickNote()}
+  else if(S.phase==='result'&&S.source)enterResult();
+}
+function setLang(l){S.lang=l==='fa'?'fa':'en';save();applyI18n()}
+function setTheme(th){
+  S.theme=(th==='light'||th==='dark')?th:null;save();
+  const root=document.documentElement;
+  if(S.theme)root.dataset.theme=S.theme;
+  else root.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+}
+
+/* sound */
+function ctx(){
+  if(!audio){try{audio=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}}
+  if(audio&&audio.state==='suspended'){try{audio.resume()}catch(e){}}
+  return audio;
+}
+function tone(f,t0,dur,vol){
+  const o=audio.createOscillator(),g=audio.createGain();
+  o.type='sine';o.frequency.value=f;
+  g.gain.setValueAtTime(0,t0);g.gain.linearRampToValueAtTime(vol,t0+.04);g.gain.exponentialRampToValueAtTime(.0001,t0+dur);
+  o.connect(g);g.connect(audio.destination);o.start(t0);o.stop(t0+dur+.05);
+}
+function chime(kind){
+  const a=ctx();if(!a)return;const t=a.currentTime+.05;
+  if(kind==='end')[659,523,392].forEach((f,i)=>tone(f,t+i*.45,1.1,.16));
+  else [523,659].forEach((f,i)=>tone(f,t+i*.4,1,.09));
+}
+
+/* views */
+function view(id){
+  ['vSetup','vMem','vExam','vResult'].forEach(v=>$('#'+v).hidden=v!==id);
+  const ex=id==='vExam';
+  $('#clockWrap').hidden=!ex;$('#finishBtn').hidden=!ex;$('#track').hidden=!ex;
+  if(!ex){$('#alert').hidden=true;$('#top').classList.remove('warn')}
+  $('#'+id).scrollTop=0;
+}
+
+/* setup */
+function expectedParas(){
+  const v=Math.round(+$('#pcount').value);
+  return v>=1&&v<=20?v:(S.expectedParas||4);
+}
+function refreshMeta(){
+  const n=norm($('#paste').value,true),p=n?n.split('\n').length:0;
+  const exp=expectedParas();
+  const tail=(p&&p!==exp)?'. '+plural(exp,'paragraph')+(S.lang==='fa'?' مورد انتظار.':' expected.'):'';
+  $('#meta').textContent=plural(p,'paragraph')+(S.lang==='fa'?'، ':', ')+plural(wc(n),'word')+tail;
+  $('#startBtn').disabled=!n;
+}
+function readSettings(){
+  let d=Math.round(+$('#dur').value)||40;d=Math.min(180,Math.max(1,d));
+  let w=Math.round(+$('#warn').value);if(isNaN(w))w=10;w=Math.min(d-1,Math.max(0,w));
+  let e=Math.round(+$('#pcount').value)||4;e=Math.min(20,Math.max(1,e));
+  S.durationMin=d;S.warnMin=w;S.expectedParas=e;
+  S.mode=$('#mode').value==='para'?'para':'full';
+  S.name=$('#pname').value.slice(0,40);
+  S.ign=$('#ign').checked;S.ignCase=$('#ignCase').checked;S.ignPunct=$('#ignPunct').checked;S.hideP=$('#hideP').checked;
+  let g=Math.round(+$('#pgoal').value)||95;g=Math.min(100,Math.max(50,g));S.goal=g;
+  $('#dur').value=d;$('#warn').value=w;$('#pcount').value=e;$('#pgoal').value=g;
+}
+function run(keepPara){
+  const ps=parasOf(S.source);
+  if(S.mode==='para'){
+    if(!keepPara||!Array.isArray(S.paraTyped)||S.paraTyped.length!==ps.length)
+      S.paraTyped=ps.map(()=> '');
+    S.curPara=Math.min(Math.max(0,S.curPara||0),Math.max(0,ps.length-1));
+    S.typed=S.paraTyped.join('\n');
+  }else{S.typed='';S.paraTyped=[];S.curPara=0;}
+  if(S.hideP){S.phase='memorize';save();enterMem()}
+  else beginTyping();
+}
+function beginTyping(){
+  S.startedAt=Date.now();S.endAt=S.startedAt+S.durationMin*60000;S.warned=false;S.timeUp=false;S.phase='exam';
+  save();enterExam();
+}
+
+/* exam */
+function enterMem(){
+  const box=$('#memPassage');box.replaceChildren();
+  parasOf(S.source).forEach(p=>{const e=document.createElement('p');e.textContent=p;box.append(e)});
+  $('#memWords').textContent=wc(S.source);
+  view('vMem');$('#memStart').focus();
+}
+function enterExam(){
+  const ps=parasOf(S.source);
+  const para=S.mode==='para';
+  $('#paraNav').hidden=!para;
+  document.querySelector('.exam').classList.toggle('solo',!!S.hideP);
+  const nm=(S.name||'').trim();
+  $('#copyName').textContent=nm?' — '+nm:'';
+  const ww=$('#whoWrap');ww.hidden=!nm;$('#whoName').textContent=nm;
+  if(para)buildDots(ps.length);
+  if(para)showPara(S.curPara||0,true);
+  else{
+    const box=$('#passage');box.replaceChildren();
+    ps.forEach(p=>{const e=document.createElement('p');e.textContent=p;box.append(e)});
+    $('#typed').value=S.typed||'';
+    $('#pWords').textContent=wc(S.source);
+  }
+  $('#zone').hidden=!S.warnMin;$('#zone').style.width=(S.warnMin/S.durationMin*100)+'%';
+  view('vExam');countTyped();tick();
+  clearInterval(tickId);tickId=setInterval(tick,250);$('#typed').focus();
+}
+function buildDots(n){
+  const d=$('#pdots');d.replaceChildren();
+  for(let i=0;i<n;i++){
+    const b=document.createElement('button');
+    b.className='mini';b.textContent=i+1;b.dataset.i=i;
+    b.addEventListener('click',()=>showPara(i));
+    d.append(b);
+  }
+}
+function storeCurrent(){
+  if(S.mode==='para'){S.paraTyped[S.curPara]=$('#typed').value;S.typed=S.paraTyped.join('\n')}
+  else S.typed=$('#typed').value;
+  save();
+}
+function showPara(i,force){
+  const ps=parasOf(S.source);
+  if(!ps.length)return;
+  i=Math.min(ps.length-1,Math.max(0,i));
+  if(!force&&i===S.curPara){updateParaUI();return}
+  if(!force)storeCurrent();
+  S.curPara=i;save();
+  const box=$('#passage');box.replaceChildren();
+  const e=document.createElement('p');e.textContent=ps[i];box.append(e);
+  $('#typed').value=(S.paraTyped[i]||'');
+  updateParaUI();countTyped();$('#typed').focus();
+}
+function updateParaUI(){
+  const ps=parasOf(S.source),n=ps.length,i=S.curPara;
+  $('#paraLabel').textContent=S.lang==='fa'?'پاراگراف '+(i+1)+' از '+n:'Paragraph '+(i+1)+' of '+n;
+  $('#pWords').textContent=wc(ps[i]||'');
+  $('#prevPara').disabled=i<=0;$('#nextPara').disabled=i>=n-1;
+  [...$('#pdots').children].forEach((b,k)=>b.classList.toggle('on',k===i));
+}
+function countTyped(){
+  const v=$('#typed').value;
+  $('#tWords').textContent=wc(v);
+  if(S.mode==='para'){S.paraTyped[S.curPara]=v;S.typed=S.paraTyped.join('\n')}
+  else S.typed=v;
+  save();
+}
+function tickNote(){
+  const fa=S.lang==='fa';
+  $('#clockNote').textContent=!S.warnMin?(fa?'بدون هشدار':"No alert set")
+    :S.warned?(fa?'فقط '+plural(S.warnMin,'minute')+' آخر':'Last '+plural(S.warnMin,'minute'))
+    :(fa?'هشدار در '+mmss(S.warnMin*60)+' مانده':'Soft alert at '+mmss(S.warnMin*60)+' left');
+}
+function tick(){
+  const total=S.durationMin*60000,left=Math.max(0,S.endAt-Date.now());
+  $('#clock').textContent=mmss(left/1000);
+  $('#fill').style.width=((1-left/total)*100)+'%';
+  if(!S.warned&&S.warnMin&&left<=S.warnMin*60000){S.warned=true;save();ping()}
+  $('#top').classList.toggle('warn',S.warned);
+  tickNote();
+  if(left<=0)finish(true);
+}
+function ping(){
+  chime('warn');
+  const fa=S.lang==='fa';
+  const a=$('#alert');a.textContent=plural(S.warnMin,'minute')+(fa?' مانده. ادامه بده!':' left. Keep going.');a.hidden=false;
+  clearTimeout(alertT);alertT=setTimeout(()=>a.hidden=true,9000);
+}
+function finish(timeUp){
+  if(S.phase!=='exam')return;
+  clearInterval(tickId);
+  if($('#confirm').open)$('#confirm').close();
+  storeCurrent();
+  S.usedSec=timeUp?S.durationMin*60:Math.min(S.durationMin*60,Math.round((Date.now()-S.startedAt)/1000));
+  S.timeUp=timeUp;S.recordOnce=true;S.phase='result';save();
+  if(timeUp)chime('end');
+  enterResult();
+}
+
+/* diff */
+const tokens=t=>t.match(/\s+|[\p{L}\p{N}]+(?:'[\p{L}\p{N}]+)*|[^\s\p{L}\p{N}]/gu)||[];
+function diff(a,b){
+  let s=0;while(s<a.length&&s<b.length&&a[s]===b[s])s++;
+  let ea=a.length,eb=b.length;
+  while(ea>s&&eb>s&&a[ea-1]===b[eb-1]){ea--;eb--}
+  const A=a.slice(s,ea),B=b.slice(s,eb),n=A.length,m=B.length,w=m+1,ops=[];
+  for(let i=0;i<s;i++)ops.push(['=',a[i]]);
+  if(n*m>3e7){A.forEach(t=>ops.push(['-',t]));B.forEach(t=>ops.push(['+',t]))}
+  else{
+    const L=new Uint16Array((n+1)*w);
+    for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)
+      L[i*w+j]=A[i]===B[j]?L[(i+1)*w+j+1]+1:Math.max(L[(i+1)*w+j],L[i*w+j+1]);
+    let i=0,j=0;
+    while(i<n&&j<m){
+      if(A[i]===B[j]){ops.push(['=',A[i]]);i++;j++}
+      else if(L[(i+1)*w+j]>=L[i*w+j+1]){ops.push(['-',A[i]]);i++}
+      else{ops.push(['+',B[j]]);j++}
+    }
+    while(i<n)ops.push(['-',A[i++]]);
+    while(j<m)ops.push(['+',B[j++]]);
+  }
+  for(let k=ea;k<a.length;k++)ops.push(['=',a[k]]);
+  return ops;
+}
+
+function scorePair(srcRaw,gotRaw){
+  const a=tokens(compareText(srcRaw||'')),b=tokens(compareText(gotRaw||''));
+  const ops=diff(a,b);
+  let hit=0,miss=0,extra=0,wHit=0,wMiss=0,wExtra=0,blocks=0;
+  const isW=t=>/^\s/.test(t), isWord=t=>/^[\p{L}\p{N}]/u.test(t);
+  for(let i=0;i<ops.length;){
+    if(ops[i][0]==='='){
+      if(!isW(ops[i][1])){hit++;if(isWord(ops[i][1]))wHit++}
+      i++;continue;
+    }
+    let d=0,e=0;
+    for(;i<ops.length&&ops[i][0]!=='=';i++){
+      const k=ops[i][0],t=ops[i][1];
+      if(isW(t))continue;
+      if(k==='-'){miss++;d++;if(isWord(t))wMiss++}
+      else{extra++;e++;if(isWord(t))wExtra++}
+    }
+    if(d+e)blocks++;
+  }
+  const tot=hit+miss+extra,wtot=wHit+wMiss+wExtra;
+  let acc=tot?hit/tot*100:(blocks?0:100);
+  let wacc=wtot?wHit/wtot*100:(blocks?0:100);
+  if(blocks&&acc>=99.95)acc=99.9;
+  if(blocks&&wacc>=99.95)wacc=99.9;
+  return {ops,hit,miss,extra,wHit,wMiss,wExtra,blocks,acc,wacc};
+}
+function renderOps(box,ops){
+  box.replaceChildren();
+  let buf='';
+  const flush=()=>{if(buf){box.append(buf);buf=''}};
+  const isW=t=>/^\s/.test(t);
+  const vis=t=>/^\s+$/.test(t)?t.replace(/\n/g,'¶\n').replace(/[ \t]/g,'·'):t;
+  const mk=(c,t)=>{const s=document.createElement('span');s.className=c;s.textContent=vis(t);box.append(s)};
+  for(let i=0;i<ops.length;){
+    if(ops[i][0]==='='){buf+=ops[i][1];i++;continue}
+    flush();let d='',e='';
+    for(;i<ops.length&&ops[i][0]!=='=';i++){
+      if(ops[i][0]==='-')d+=ops[i][1];else e+=ops[i][1];
+    }
+    if(d)mk('m',d);if(e)mk('x',e);
+  }
+  flush();
+  if(!ops.length)box.textContent='(empty)';
+}
+
+function renderHistory(){
+  const H=loadHist(),fa=S.lang==='fa';
+  $('#hsAttempts').textContent=H.length;
+  const accs=H.map(h=>+h.acc||0);
+  $('#hsAvg').textContent=H.length?(accs.reduce((a,b)=>a+b,0)/H.length).toFixed(1)+'%':'–';
+  $('#hsBest').textContent=H.length?Math.max(...accs).toFixed(1)+'%':'–';
+  $('#hsErr').textContent=H.reduce((a,h)=>a+(+h.miss||0)+(+h.extra||0),0);
+  $('#goalLine').innerHTML=(fa?'هدف: <bdi>'+(S.goal||95)+'%</bdi>':'Goal: '+(S.goal||95)+'%');
+  const tb=$('#histBody');tb.replaceChildren();
+  const show=H.slice(-10).reverse();
+  $('#histTable').hidden=!show.length;
+  $('#histEmpty').hidden=!!show.length;
+  $('#clearHist').hidden=!H.length;
+  const loc=fa?'fa-IR':'en-GB';
+  show.forEach(h=>{
+    const tr=document.createElement('tr');
+    if((+h.acc||0)>=(S.goal||95))tr.className='goalmet';
+    const cells=[
+      new Date(h.t).toLocaleString(loc,{year:'2-digit',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}),
+      h.mode==='para'?T('optPara'):T('optFull'),
+      h.paras,(+h.acc).toFixed(1)+'%',(h.miss||0)+' / '+(h.extra||0),mmss(h.sec||0)
+    ];
+    cells.forEach((c,i)=>{const td=document.createElement('td');td.textContent=c;if(i===3)td.className='acc';tr.append(td)});
+    tb.append(tr);
+  });
+  renderDrawer();
+}
+
+function renderDrawer(){
+  const H=loadHist(),fa=S.lang==='fa';
+  const nm=(S.name||'').trim();
+  const dn=$('#dwName');
+  if(nm){dn.textContent=nm;dn.classList.remove('dw-no')}
+  else{dn.textContent=T('dwNoName');dn.classList.add('dw-no')}
+  $('#dwGoalLine').innerHTML=(fa?'هدف: <bdi>'+(S.goal||95)+'%</bdi>':'Goal: '+(S.goal||95)+'%');
+  $('#dwAvatar').hidden=!!nm;
+  const di=$('#dwInit');di.hidden=!nm;if(nm)di.textContent=nm[0].toUpperCase();
+  $('#dwAttempts').textContent=H.length;
+  const accs=H.map(h=>+h.acc||0);
+  $('#dwAvg').textContent=H.length?(accs.reduce((a,b)=>a+b,0)/H.length).toFixed(1)+'%':'–';
+  $('#dwBest').textContent=H.length?Math.max(...accs).toFixed(1)+'%':'–';
+  $('#dwErr').textContent=H.reduce((a,h)=>a+(+h.miss||0)+(+h.extra||0),0);
+  const L=$('#dwList');L.replaceChildren();
+  const show=H.slice(-5).reverse();
+  $('#dwEmpty').hidden=!!show.length;
+  const loc=fa?'fa-IR':'en-GB';
+  show.forEach((h,ix)=>{
+    const d=document.createElement('div');d.className='dw-item';
+    const n=document.createElement('span');n.className='n';n.textContent='#'+(H.length-ix);
+    const mid=document.createElement('small');
+    mid.textContent=new Date(h.t).toLocaleString(loc,{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})+' · '+(h.mode==='para'?T('optPara'):T('optFull'));
+    const a=document.createElement('span');a.className='a';a.textContent=(+h.acc).toFixed(1)+'%';
+    if((+h.acc||0)>=(S.goal||95))a.style.color='var(--good)';
+    d.append(n,mid,a);L.append(d);
+  });
+}
+
+function titleOf(t){const l=(t||'').split('\n')[0].trim();return l.length>48?l.slice(0,48)+'…':(l||'(untitled)')}
+function renderBank(){
+  const B=loadBank(),fa=S.lang==='fa';
+  const L=$('#bankList');L.replaceChildren();
+  $('#dwBankEmpty').hidden=!!B.length;
+  B.forEach(b=>{
+    const d=document.createElement('div');d.className='bank-item';
+    const tx=document.createElement('div');tx.className='bank-tx';
+    const h=document.createElement('div');h.className='bank-h';h.textContent=b.title;
+    h.title=T('bankRename');h.style.cursor='pointer';
+    h.addEventListener('click',()=>{
+      const t=prompt(T('bankAsk'),b.title);
+      if(t===null)return;
+      const B2=loadBank(),it=B2.find(x=>x.id===b.id);
+      if(it){it.title=(t.trim()||b.title).slice(0,60);saveBank(B2);renderBank()}
+    });
+    const m=document.createElement('div');m.className='bank-m';
+    m.textContent=b.paras+' '+(fa?'پاراگراف':'paragraph'+(b.paras===1?'':'s'))+' · '+b.words+' '+(fa?'کلمه':'word'+(b.words===1?'':'s'))+' · '+new Date(b.t).toLocaleDateString(fa?'fa-IR':'en-GB');
+    const acts=document.createElement('div');acts.className='bank-acts';
+    const u=document.createElement('button');u.className='mini';u.textContent=T('bankUse');
+    u.addEventListener('click',()=>{
+      clearInterval(tickId);
+      if($('#confirm').open)$('#confirm').close();
+      $('#paste').value=b.text;S.draft=b.text;S.source='';save();
+      $('#pcount').value=b.paras;S.expectedParas=b.paras;
+      S.phase='setup';save();closeDrawer();refreshMeta();view('vSetup');$('#paste').focus();
+    });
+    const del=document.createElement('button');del.className='mini danger';del.textContent=T('bankDel');
+    del.addEventListener('click',()=>{saveBank(loadBank().filter(x=>x.id!==b.id));renderBank()});
+    tx.append(h,m);acts.append(u,del);d.append(tx,acts);L.append(d);
+  });
+}
+function saveCurrentToBank(customTitle){
+  const txt=S.source;if(!txt)return false;
+  const B=loadBank();
+  if(B.some(x=>x.text===txt))return false;
+  const auto=titleOf(txt);
+  B.unshift({id:'p'+Date.now().toString(36),t:Date.now(),title:((customTitle||'')||auto).slice(0,60)||auto,text:txt,paras:parasOf(txt).length,words:wc(txt)});
+  saveBank(B);renderBank();return true;
+}
+
+function enterResult(){
+  const srcPs=parasOf(S.source);
+  const gotRawFull=S.typed||'';
+  const gotPsRaw=S.mode==='para'
+    ? srcPs.map((_,i)=>S.paraTyped[i]||'')
+    : parasOf(norm(gotRawFull,true));
+  while(gotPsRaw.length<srcPs.length)gotPsRaw.push('');
+
+  const overall=scorePair(S.source,gotRawFull);
+  const per=srcPs.map((s,i)=>({i,src:s,got:gotPsRaw[i]||'',s:scorePair(s,gotPsRaw[i]||'')}));
+  const exact=per.filter(p=>p.s.blocks===0).length;
+  let worst=-1,worstAcc=101;
+  per.forEach(p=>{if(p.s.blocks&&p.s.acc<worstAcc){worstAcc=p.s.acc;worst=p.i}});
+
+  S.weakestPara=worst;save();
+  const D=$('#diff');
+  renderOps(D,overall.ops);
+  D.hidden=S.mode==='para';
+
+  const PR=$('#paraResults');PR.replaceChildren();
+  per.forEach(p=>{
+    const fa=S.lang==='fa';
+    const card=document.createElement('div');card.className='para-card'+(p.s.blocks?'':' exact');
+    const h=document.createElement('h4');
+    h.textContent=(fa?'پاراگراف '+(p.i+1)+' — ':'Paragraph '+(p.i+1)+' — ')+(p.s.blocks?plural(p.s.blocks,'difference')+', '+p.s.acc.toFixed(1)+'%':T('exactMark'));
+    const sub=document.createElement('div');sub.className='sub';
+    sub.textContent=wc(compareText(p.got))+' / '+wc(compareText(p.src))+(fa?' کلمه · جاافتاده '+p.s.miss+'، اضافه '+p.s.extra+' · کلمات '+p.s.wacc.toFixed(1)+'%':' words · missed '+p.s.miss+', extra '+p.s.extra+' · words '+p.s.wacc.toFixed(1)+'%');
+    const jb=document.createElement('button');jb.className='mini';jb.textContent=T('practice');
+    jb.addEventListener('click',()=>{
+      S.mode='para';S.curPara=p.i;S.phase='exam';
+      if(!Array.isArray(S.paraTyped)||S.paraTyped.length!==srcPs.length)S.paraTyped=gotPsRaw.slice();
+      S.startedAt=Date.now();S.endAt=S.startedAt+S.durationMin*60000;S.warned=false;S.timeUp=false;
+      save();enterExam();
+    });
+    const db=document.createElement('div');db.className='diff';
+    renderOps(db,p.s.ops);
+    card.append(h,sub,db);
+    const w=document.createElement('div');w.style.marginTop='10px';w.append(jb);card.append(w);
+    PR.append(card);
+  });
+
+  const fa=S.lang==='fa';
+  const accVal=overall.blocks?+overall.acc.toFixed(1):100;
+  const h=$('#verdict');
+  h.className=overall.blocks?'':'good';
+  h.textContent=(S.mode==='para'?(fa?'تمرین پاراگرافی: ':'Paragraph practice: '):'')+(overall.blocks?plural(overall.blocks,'difference')+'.':(fa?'بی‌نقص!':'Exact match.'));
+  $('#verdictSub').textContent=(S.timeUp?(fa?'وقت تمام شد. ':'Time is up. '):'')+(S.mode==='para'?(fa?exact+' از '+srcPs.length+' پاراگراف بی‌نقص. ':exact+' of '+srcPs.length+' paragraphs exact. '):'')+(overall.blocks?(fa?'تک‌تک نقطه‌های مشخص‌شده را با متن اصلی چک کن. کلمات '+overall.wacc.toFixed(1)+'% · جاافتاده '+overall.miss+'، اضافه '+overall.extra+'.':'Check each marked spot against the passage. Words '+overall.wacc.toFixed(1)+'% · missed '+overall.miss+', extra '+overall.extra+'.'):(fa?'همه کلمات و علائم دقیقاً با متن یکی است.':'Every word and mark matches the passage.'));
+  $('#stTime').textContent=mmss(S.usedSec);
+  $('#stAcc').textContent=accVal+'%';
+  $('#ringNum').textContent=accVal+'%';
+  $('#ringFg').style.strokeDashoffset=(326.7*(1-accVal/100)).toFixed(1);
+  $('#stWords').textContent=wc(compareText(gotRawFull))+' / '+wc(compareText(S.source));
+  $('#stPara').textContent=exact+' / '+srcPs.length;
+  const nm2=(S.name||'').trim(),cl=$('#candLine');
+  cl.hidden=!nm2;if(nm2)cl.textContent=T('cand')+': '+nm2;
+  const ww2=$('#whoWrap');ww2.hidden=!nm2;$('#whoName').textContent=nm2;
+  if(S.recordOnce){
+    S.recordOnce=false;
+    const H=loadHist();
+    H.push({t:Date.now(),name:nm2,mode:S.mode,paras:srcPs.length,acc:+overall.acc.toFixed(1),miss:overall.miss,extra:overall.extra,blocks:overall.blocks,sec:S.usedSec});
+    saveHist(H);save();
+    const al=$('#attLine');al.hidden=false;
+    al.textContent=(S.lang==='fa'?'آزمون شماره '+H.length+' · در کارنامه ذخیره شد':'Attempt #'+H.length+' · saved to your record');
+    renderHistory();
+  }else{$('#attLine').hidden=true}
+  const rb=$('#retryPara');
+  rb.hidden=worst<0;
+  const sb=$('#saveBank'),inBank=loadBank().some(x=>x.text===S.source);
+  sb.disabled=inBank;sb.textContent=inBank?T('bankSaved'):T('bankSave');
+  if(worst>=0)rb.textContent=(fa?'تمرین پاراگراف '+(worst+1)+' ('+per[worst].s.acc.toFixed(1)+'%)':'Retry paragraph '+(worst+1)+' ('+per[worst].s.acc.toFixed(1)+'%)');
+  view('vResult');
+}
+
+/* events */
+$('#paste').addEventListener('input',()=>{S.draft=$('#paste').value;save();refreshMeta()});
+$('#pname').addEventListener('input',()=>{S.name=$('#pname').value.slice(0,40);save();renderDrawer()});
+$('#pgoal').addEventListener('input',()=>{let g=Math.round(+$('#pgoal').value)||95;S.goal=Math.min(100,Math.max(50,g));save();renderHistory()});
+let armClear=false,armT=0;
+$('#clearHist').addEventListener('click',()=>{
+  if(!armClear){armClear=true;$('#clearHist').textContent=T('hsSure');clearTimeout(armT);armT=setTimeout(()=>{armClear=false;const b=$('#clearHist');if(b)b.textContent=T('hsClear')},3000);return}
+  armClear=false;saveHist([]);renderHistory();
+});
+function openDrawer(){$('#drawer').hidden=false;$('#scrim').hidden=false;renderDrawer()}
+function closeDrawer(){$('#drawer').hidden=true;$('#scrim').hidden=true}
+$('#menuBtn').addEventListener('click',openDrawer);
+$('#dwClose').addEventListener('click',closeDrawer);
+$('#scrim').addEventListener('click',closeDrawer);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#drawer').hidden)closeDrawer()});
+$('#dwNew').addEventListener('click',()=>{
+  clearInterval(tickId);
+  if($('#confirm').open)$('#confirm').close();
+  closeDrawer();S.phase='setup';save();view('vSetup');$('#paste').focus();
+});
+let armClear2=false,armT2=0;
+$('#dwClear').addEventListener('click',()=>{
+  if(!armClear2){armClear2=true;$('#dwClear').textContent=T('hsSure');clearTimeout(armT2);armT2=setTimeout(()=>{armClear2=false;const b=$('#dwClear');if(b)b.textContent=T('hsClear')},3000);return}
+  armClear2=false;saveHist([]);renderHistory();closeDrawer();
+});
+$('#pcount').addEventListener('input',refreshMeta);
+$('#mode').addEventListener('change',()=>{S.mode=$('#mode').value;save()});
+$('#startBtn').addEventListener('click',()=>{
+  ctx();readSettings();
+  S.draft=$('#paste').value;S.source=norm(S.draft,true);S.curPara=0;
+  if(S.source)run();
+});
+$('#testSound').addEventListener('click',()=>chime('warn'));
+$('#themeBtn').addEventListener('click',()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark'));
+$('#langBtn').addEventListener('click',()=>setLang(S.lang==='fa'?'en':'fa'));
+$('#typed').addEventListener('input',e=>{countTyped()});
+['paste','drop'].forEach(ev=>$('#typed').addEventListener(ev,e=>{
+  e.preventDefault();
+  $('#tHint').textContent=S.lang==='fa'?'چسباندن غیرفعال است.':'Pasting is turned off.';
+  clearTimeout(hintT);hintT=setTimeout(()=>$('#tHint').textContent='',2500);
+}));
+$('#memStart').addEventListener('click',()=>{ctx();beginTyping()});
+$('#memBack').addEventListener('click',()=>{S.phase='setup';save();view('vSetup')});
+$('#prevPara').addEventListener('click',()=>showPara(S.curPara-1));
+$('#nextPara').addEventListener('click',()=>showPara(S.curPara+1));
+$('#finishBtn').addEventListener('click',()=>{
+  $('#left').textContent=mmss((S.endAt-Date.now())/1000);
+  $('#confirm').showModal();
+});
+$('#keep').addEventListener('click',()=>$('#confirm').close());
+$('#yes').addEventListener('click',()=>finish(false));
+$('#retry').addEventListener('click',()=>{ctx();S.curPara=0;run()});
+$('#retryPara').addEventListener('click',()=>{
+  ctx();
+  const n=parasOf(S.source).length;
+  S.mode='para';
+  S.curPara=(S.weakestPara>=0&&S.weakestPara<n)?S.weakestPara:0;
+  S.phase='exam';
+  if(!Array.isArray(S.paraTyped)||S.paraTyped.length!==n)S.paraTyped=parasOf(S.source).map(()=> '');
+  S.paraTyped[S.curPara]='';
+  S.startedAt=Date.now();S.endAt=S.startedAt+S.durationMin*60000;S.warned=false;S.timeUp=false;
+  save();enterExam();
+});
+$('#fresh').addEventListener('click',()=>{
+  S.phase='setup';S.typed='';S.paraTyped=[];S.curPara=0;S.draft='';S.source='';save();
+  $('#paste').value='';refreshMeta();view('vSetup');$('#paste').focus();
+});
+$('#saveBank').addEventListener('click',()=>{
+  const t=prompt(T('bankAsk'),titleOf(S.source));
+  if(t===null)return;
+  if(saveCurrentToBank(t.trim())){const b=$('#saveBank');b.disabled=true;b.textContent=T('bankSaved')}
+});
+
+/* boot */
+load();
+if(typeof S.lang!=='string'||!I18N[S.lang])S.lang='en';
+setTheme(S.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+$('#paste').value=S.draft||'';
+$('#pname').value=S.name||'';
+$('#pgoal').value=S.goal||95;
+$('#dur').value=S.durationMin;$('#warn').value=S.warnMin;
+$('#pcount').value=S.expectedParas||4;$('#mode').value=S.mode==='para'?'para':'full';
+$('#ign').checked=!!S.ign;$('#ignCase').checked=!!S.ignCase;$('#ignPunct').checked=!!S.ignPunct;$('#hideP').checked=!!S.hideP;
+matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change',e=>{if(!S.theme)setTheme(e.matches?'dark':'light')});
+applyI18n();
+if(S.phase==='exam'&&S.source){
+  if(Date.now()>=S.endAt){S.usedSec=S.durationMin*60;S.timeUp=true;S.phase='result';save();enterResult()}
+  else enterExam();
+}else if(S.phase==='memorize'&&S.source)enterMem();
+else if(S.phase==='result'&&S.source)enterResult();
+else{S.phase='setup';view('vSetup')}
+})();
+</script>
+</body>
+</html>
