@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IELTS Reading practice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Estedad:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#D7D9DD;--sheet:#FFFFFF;--sheet2:#EFF0F2;--ink:#191919;--muted:#5C5C5C;--line:#C4C8CE;
+  --accent:#005B96;--accent-d:#00487A;--accent-ink:#FFFFFF;
+  --head:#141414;--head-mut:#BDBDBD;
+  --warn:#8A5A00;--warn-bg:#FFF3CF;--bad:#B00020;
+  --sel:#FFE08A;--hatch:rgba(0,91,150,.14);
+  --sans:Arial,"Helvetica Neue",Helvetica,sans-serif;
+  --fa:"Estedad",Arial,Tahoma,sans-serif;
+  box-sizing:border-box;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1116;--sheet:#1A1F27;--sheet2:#131820;--ink:#E9EBF0;--muted:#9AA2B3;--line:#2D3542;
+    --accent:#6FA9DC;--accent-d:#8FC0E8;--accent-ink:#0A1626;--head:#000;--head-mut:#A9A9A9;
+    --warn:#FFC861;--warn-bg:#3A2C0C;--bad:#FF9AAB;--sel:#5A4710;--hatch:rgba(111,169,220,.18);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1116;--sheet:#1A1F27;--sheet2:#131820;--ink:#E9EBF0;--muted:#9AA2B3;--line:#2D3542;
+  --accent:#6FA9DC;--accent-d:#8FC0E8;--accent-ink:#0A1626;--head:#000;--head-mut:#A9A9A9;
+  --warn:#FFC861;--warn-bg:#3A2C0C;--bad:#FF9AAB;--sel:#5A4710;--hatch:rgba(111,169,220,.18);
+}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{height:100%;background:var(--bg)}
+body{margin:0;height:100%;display:flex;flex-direction:column;background:var(--bg);color:var(--ink);font:400 15px/1.55 var(--sans)}
+html[lang="fa"] body{font-family:var(--fa);line-height:1.9}
+html[lang="fa"] .btn,html[lang="fa"] .lang-btn,html[lang="fa"] select,html[lang="fa"] textarea.paste,html[lang="fa"] .mini{font-family:var(--fa)}
+html[lang="fa"] h1,html[lang="fa"] h2{font-weight:800}
+button,select,input,textarea{font-family:inherit}
+
+.top{flex:none;background:var(--head);color:#fff;border-bottom:3px solid var(--accent);padding-top:env(safe-area-inset-top,0px)}
+.top-row{display:flex;align-items:center;gap:14px;min-height:62px;padding:8px 20px}
+.brand{display:flex;align-items:center;gap:12px;direction:ltr}
+.ielts{font-size:23px;font-weight:800;letter-spacing:.14em;color:#fff;text-decoration:none}
+.vdiv{width:1px;height:30px;background:#4d4d4d;flex:none}
+.section{font-size:13px;font-weight:700;color:var(--head-mut);white-space:nowrap}
+.controls{display:flex;align-items:center;gap:8px;margin-inline-start:auto}
+.icon-btn,.lang-btn,.home-link{height:40px;border-radius:3px;border:1px solid #5c5c5c;background:transparent;color:#fff;cursor:pointer;font-size:13px;font-weight:700}
+.icon-btn{width:40px;display:grid;place-items:center}
+.lang-btn,.home-link{padding:0 12px;display:flex;align-items:center;text-decoration:none}
+.icon-btn:hover,.lang-btn:hover,.home-link:hover{border-color:#fff}
+.icon-btn svg{width:18px;height:18px}
+#themeBtn .sun{display:none}
+:root[data-theme="dark"] #themeBtn .moon{display:none}
+:root[data-theme="dark"] #themeBtn .sun{display:block}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) #themeBtn .moon{display:none}
+  :root:not([data-theme="light"]) #themeBtn .sun{display:block}
+}
+
+.view{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px calc(60px + env(safe-area-inset-bottom,0px))}
+.wrap.sheet-open{padding-bottom:calc(46vh + env(safe-area-inset-bottom,0px))}
+h1{font-size:28px;line-height:1.3;font-weight:700;margin:0 0 8px}
+.lead{color:var(--muted);max-width:68ch;margin:0 0 22px}
+.card{background:var(--sheet);border:1px solid var(--line);border-radius:4px;padding:22px;margin-bottom:14px}
+.lbl{display:block;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:6px}
+.paste{display:block;width:100%;min-height:220px;resize:vertical;padding:12px 14px;background:var(--sheet);color:var(--ink);border:1px solid #9AA0A8;border-radius:3px;font-size:16px;line-height:1.7;direction:ltr;text-align:left}
+.paste:focus,select:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:var(--accent)}
+.meta{margin-top:6px;font-size:13px;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.btn{font-size:15px;font-weight:700;padding:11px 24px;min-height:44px;border-radius:3px;border:1px solid transparent;cursor:pointer}
+.primary{background:var(--accent);color:var(--accent-ink)}
+.primary:hover{background:var(--accent-d)}
+.ghost{background:var(--sheet);color:var(--ink);border-color:#9AA0A8}
+.ghost:hover{border-color:var(--ink)}
+.mini{font-size:14px;font-weight:700;min-width:44px;min-height:40px;padding:6px 12px;border:1px solid #9AA0A8;border-radius:3px;background:var(--sheet);color:var(--ink);cursor:pointer}
+.mini:hover{border-color:var(--accent);color:var(--accent)}
+.mini.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+select{padding:9px 10px;background:var(--sheet);color:var(--ink);border:1px solid #9AA0A8;border-radius:3px;font-size:16px;max-width:100%;min-height:40px}
+.btn:focus-visible,.icon-btn:focus-visible,.lang-btn:focus-visible,.mini:focus-visible,.home-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.msg{margin-top:12px;font-size:13.5px;color:var(--warn);background:var(--warn-bg);padding:8px 12px;border-radius:3px}
+.foot{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);text-align:center}
+
+/* reader */
+.bar{position:sticky;top:0;z-index:5;background:var(--sheet);border:1px solid var(--line);border-radius:3px;padding:8px 10px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.grp{display:flex;align-items:center;gap:6px}
+.status{font-size:13px;color:var(--muted);min-height:1.3em;margin:0 0 8px}
+.status .mini{margin-inline-start:8px}
+.passage{--rfs:19px;direction:ltr;text-align:left;background:var(--sheet);border:1px solid var(--line);border-radius:4px;padding:6px 22px 14px}
+.para{padding:10px 0 4px;border-bottom:1px solid var(--line)}
+.para:last-child{border-bottom:0}
+.para p{margin:0;font-size:var(--rfs);line-height:1.9}
+.rw{border-radius:2px;cursor:pointer}
+.rw:hover{background:var(--hatch)}
+.rs.sel,.rw.sel{background:var(--sel)}
+.passage.sent-mode .rw{cursor:inherit}
+.passage.sent-mode .rw:hover{background:none}
+.passage.sent-mode .rs{cursor:pointer}
+.passage.sent-mode .rs:hover{background:var(--hatch)}
+.ptr{direction:rtl;text-align:right;font-family:var(--fa);font-size:calc(var(--rfs) - 2px);line-height:2.1;color:var(--muted);border-top:1px dashed var(--line);margin-top:8px;padding:8px 0 8px}
+
+/* bottom sheet */
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--sheet);color:var(--ink);border-top:3px solid var(--accent);box-shadow:0 -8px 28px rgba(0,0,0,.28);padding:16px 20px calc(16px + env(safe-area-inset-bottom,0px));max-height:46vh;overflow:auto}
+.sheet-in{max-width:780px;margin:0 auto}
+.sh-en{direction:ltr;text-align:left;font-size:20px;font-weight:800;overflow-wrap:anywhere}
+.sh-en.long{font-size:16px;font-weight:400;line-height:1.7}
+.sh-fa{direction:rtl;text-align:right;font-family:var(--fa);font-size:19px;line-height:2;margin:8px 0}
+.sh-ctx{direction:ltr;text-align:left;font-size:14px;color:var(--muted);margin-top:10px;line-height:1.6;border-top:1px dashed var(--line);padding-top:8px}
+.sh-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+
+@media (max-width:700px){
+  .section{display:none}
+  .top-row{padding:8px 12px;gap:10px}
+  .wrap{padding:18px 12px calc(50px + env(safe-area-inset-bottom,0px))}
+  .card{padding:16px}
+  h1{font-size:24px}
+  .passage{padding:4px 14px 10px}
+  .actions .btn{flex:1 1 auto}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-row">
+    <div class="brand"><a class="ielts" href="index.html" title="Home">IELTS</a><span class="vdiv" aria-hidden="true"></span><span class="section" data-i18n="brandSub">Reading practice</span></div>
+    <div class="controls">
+      <a class="home-link" href="index.html" data-i18n="back">Home</a>
+      <button class="icon-btn" id="themeBtn" aria-label="Theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="lang-btn" id="langBtn">FA / EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="view" id="view">
+<div class="wrap" id="wrap">
+
+<section id="vSetup">
+  <h1 data-i18n="title">Reading practice</h1>
+  <p class="lead" data-i18n="lead"></p>
+  <div class="card">
+    <label class="lbl" for="src" data-i18n="lblText">English text</label>
+    <textarea class="paste" id="src" data-i18n-ph="ph" spellcheck="false"></textarea>
+    <div class="meta" id="meta"></div>
+    <div class="actions">
+      <button class="btn primary" id="openBtn" data-i18n="open">Open reader</button>
+      <button class="btn ghost" id="clearBtn" data-i18n="clear">Clear</button>
+    </div>
+    <div class="msg" id="msg" hidden></div>
+  </div>
+</section>
+
+<section id="vRead" hidden>
+  <div class="bar" id="bar">
+    <div class="grp">
+      <button class="mini on" id="mWord" data-i18n="mWord">Word</button>
+      <button class="mini" id="mSent" data-i18n="mSent">Sentence</button>
+    </div>
+    <div class="grp">
+      <button class="mini" id="allBtn" data-i18n="trAll">Translate all</button>
+      <select id="style" aria-label="Translation style"><option value="sent" data-i18n="sSent"></option><option value="para" data-i18n="sPara"></option></select>
+    </div>
+    <div class="grp">
+      <button class="mini" id="fMinus" aria-label="Smaller text">A−</button>
+      <button class="mini" id="fPlus" aria-label="Bigger text">A+</button>
+      <button class="mini" id="editBtn" data-i18n="edit">Edit text</button>
+    </div>
+  </div>
+  <p class="meta" id="tapHint"></p>
+  <div class="status" id="status" role="status"></div>
+  <article class="passage" id="passage"></article>
+</section>
+
+<div class="foot" data-i18n="foot"></div>
+</div>
+</main>
+
+<aside class="sheet" id="sheet" hidden aria-live="polite">
+  <div class="sheet-in">
+    <div class="sh-en" id="shEn" lang="en"></div>
+    <div class="sh-fa" id="shFa" lang="fa"></div>
+    <div class="sh-act">
+      <button class="mini" id="shSpeak">🔊 <span data-i18n="listen">Listen</span></button>
+      <button class="mini" id="shSent" data-i18n="sentTr">Translate this sentence</button>
+      <button class="mini" id="shClose" data-i18n="close">Close</button>
+    </div>
+    <div class="sh-ctx" id="shCtx" hidden>
+      <div id="shCtxEn" lang="en"></div>
+      <div class="sh-fa" id="shCtxFa" lang="fa"></div>
+    </div>
+  </div>
+</aside>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s);
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+/* ---------- i18n ---------- */
+const I18N={
+en:{brandSub:'Reading practice',back:'Home',title:'Reading practice',
+ lead:'Paste an English text and read it here. Tap a word or a sentence to see its Persian translation, or translate the whole text at once.',
+ lblText:'English text',ph:'Paste the reading passage here…',open:'Open reader',clear:'Clear',empty:'Paste a text first.',
+ mWord:'Word',mSent:'Sentence',trAll:'Translate all',hideAll:'Hide translations',sSent:'Sentence by sentence (formal)',sPara:'Whole paragraph (smoother)',edit:'Edit text',
+ hintWord:'Tap any word to see its meaning.',hintSent:'Tap any sentence to translate it.',
+ listen:'Listen',sentTr:'Translate this sentence',close:'Close',
+ trWait:'Translating…',trFail:'Translation failed (network or service limit).',retry:'Retry',words:'words',
+ foot:'Translation comes from a free online service and may be imperfect, especially for single words without context.'},
+fa:{brandSub:'تمرین ریدینگ',back:'خانه',title:'تمرین ریدینگ',
+ lead:'یه متن انگلیسی بچسبون و همین‌جا بخونش. روی هر کلمه یا جمله بزنی ترجمهٔ فارسیش رو می‌بینی، یا کل متن رو یک‌جا ترجمه کن.',
+ lblText:'متن انگلیسی',ph:'متن ریدینگ رو اینجا بچسبون…',open:'باز کردن متن',clear:'پاک کردن',empty:'اول یه متن وارد کن.',
+ mWord:'کلمه',mSent:'جمله',trAll:'ترجمهٔ کل متن',hideAll:'پنهان کردن ترجمه',sSent:'جمله‌به‌جمله (رسمی)',sPara:'کل پاراگراف (روان‌تر)',edit:'ویرایش متن',
+ hintWord:'روی هر کلمه بزن تا معنیش رو ببینی.',hintSent:'روی هر جمله بزن تا ترجمه بشه.',
+ listen:'شنیدن',sentTr:'ترجمهٔ این جمله',close:'بستن',
+ trWait:'در حال ترجمه…',trFail:'ترجمه انجام نشد (اینترنت یا محدودیت سرویس).',retry:'تلاش دوباره',words:'کلمه',
+ foot:'ترجمه از یه سرویس آنلاین رایگانه و ممکنه بی‌نقص نباشه، مخصوصاً برای کلمه‌های تکی بدون متن اطرافشون.'}
+};
+let LANG='en';
+const T=k=>(I18N[LANG]&&I18N[LANG][k])||I18N.en[k]||k;
+function applyI18n(){
+  document.querySelectorAll('[data-i18n]').forEach(e=>e.textContent=T(e.dataset.i18n));
+  document.querySelectorAll('[data-i18n-ph]').forEach(e=>e.placeholder=T(e.dataset.i18nPh));
+  meter();hint();
+  $('#allBtn').textContent=T(allOn?'hideAll':'trAll');
+}
+function setLang(l){LANG=l;LS.set('ielts-lang',l);document.documentElement.lang=l;document.documentElement.dir=l==='fa'?'rtl':'ltr';applyI18n()}
+function setTheme(t){document.documentElement.dataset.theme=t;LS.set('ielts-theme',t)}
+
+/* ---------- text + translation ---------- */
+const ABBR=/\b(Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|vs|etc|No)\.$/i;
+const splitParas=t=>t.replace(/\r/g,'').split(/\n+/).map(s=>s.trim()).filter(Boolean);
+function splitSents(p){
+  const parts=p.split(/(?<=[.!?…]["'”’)]*)\s+(?=["“‘(]?[A-Z0-9])/),out=[];
+  for(const s of parts){if(out.length&&ABBR.test(out[out.length-1]))out[out.length-1]+=' '+s;else out.push(s)}
+  return out;
+}
+async function gt(q){
+  try{
+    const r=await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=fa&dt=t&q='+encodeURIComponent(q));
+    if(!r.ok)throw new Error('http');
+    const j=await r.json();
+    return j[0].map(x=>x[0]).join('').trim();
+  }catch(e){
+    if(q.length>480)throw e;
+    const r=await fetch('https://api.mymemory.translated.net/get?langpair=en|fa&q='+encodeURIComponent(q));
+    const j=await r.json();
+    if(+j.responseStatus!==200)throw new Error('mm');
+    return j.responseData.translatedText;
+  }
+}
+async function trLong(text){
+  if(text.length<=1200)return gt(text);
+  const ss=splitSents(text),groups=[];let g='';
+  ss.forEach(s=>{if((g+' '+s).length>1200&&g){groups.push(g);g=s}else g=g?g+' '+s:s});
+  if(g)groups.push(g);
+  const out=[];for(const x of groups)out.push(await gt(x));
+  return out.join(' ');
+}
+async function pool(tasks,n){let i=0;await Promise.all(Array.from({length:Math.min(n,tasks.length)},async()=>{while(i<tasks.length){const t=tasks[i++];await t()}}))}
+const cache=new Map();
+async function tr(q){const k=q.toLowerCase();if(cache.has(k))return cache.get(k);const r=await gt(q);cache.set(k,r);return r}
+
+/* ---------- speech (single voice) ---------- */
+const tts='speechSynthesis' in window;
+function speak(text){
+  if(!tts)return;
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=0.9;
+  const vs=speechSynthesis.getVoices().filter(v=>/^en[-_]US/i.test(v.lang));
+  const v=vs.find(x=>/Google US|Samantha|Aria|Jenny|Natural|Siri/i.test(x.name))||vs[0];
+  if(v)u.voice=v;
+  speechSynthesis.speak(u);
+}
+
+/* ---------- reader ---------- */
+let R=null,mode='word',allOn=false,sel=null,sheetTok=0,fs=+LS.get('rd-fs',19);
+function meter(){
+  const t=$('#src').value.trim();
+  $('#meta').textContent=t?t.split(/\s+/).length+' '+T('words'):'';
+}
+function hint(){$('#tapHint').textContent=T(mode==='word'?'hintWord':'hintSent')}
+function wordify(text,parent){
+  text.split(/([A-Za-z0-9]+(?:['’][A-Za-z]+)*)/).forEach(part=>{
+    if(!part)return;
+    if(/^[A-Za-z0-9]/.test(part)){const w=document.createElement('span');w.className='rw';w.textContent=part;parent.append(w)}
+    else parent.append(document.createTextNode(part));
+  });
+}
+function build(){
+  const root=$('#passage');root.replaceChildren();
+  R.paras.forEach(p=>{
+    const box=document.createElement('div');box.className='para';
+    const body=document.createElement('p');
+    p.sents.forEach((s,i)=>{
+      const se=document.createElement('span');se.className='rs';se._s=s;wordify(s.text,se);s.el=se;
+      body.append(se);if(i<p.sents.length-1)body.append(' ');
+    });
+    const t=document.createElement('div');t.className='ptr';t.lang='fa';t.hidden=true;p.trEl=t;
+    box.append(body,t);root.append(box);
+  });
+  root.classList.toggle('sent-mode',mode==='sent');
+  root.style.setProperty('--rfs',fs+'px');
+}
+function open(){
+  const t=$('#src').value.trim();
+  if(!t){const m=$('#msg');m.textContent=T('empty');m.hidden=false;return}
+  $('#msg').hidden=true;
+  R={paras:splitParas(t).map(p=>({text:p,sents:splitSents(p).map(x=>({text:x,tr:null})),tr:null}))};
+  allOn=false;$('#allBtn').textContent=T('trAll');$('#allBtn').classList.remove('on');setStatus('');
+  closeSheet();build();hint();
+  $('#vSetup').hidden=true;$('#vRead').hidden=false;$('#view').scrollTop=0;
+}
+function setMode(m){
+  mode=m;LS.set('rd-mode',m);
+  $('#mWord').classList.toggle('on',m==='word');$('#mSent').classList.toggle('on',m==='sent');
+  $('#passage').classList.toggle('sent-mode',m==='sent');
+  closeSheet();hint();
+}
+
+/* sheet */
+function clearSel(){if(sel){sel.classList.remove('sel');sel=null}}
+function closeSheet(){clearSel();$('#sheet').hidden=true;$('#wrap').classList.remove('sheet-open');sheetTok++}
+function openSheet(el,text,long){
+  clearSel();sel=el;el.classList.add('sel');
+  const en=$('#shEn');en.textContent=text;en.classList.toggle('long',!!long);
+  $('#shFa').textContent='…';$('#shCtx').hidden=true;
+  $('#sheet').hidden=false;$('#wrap').classList.add('sheet-open');
+  return ++sheetTok;
+}
+function lookupWord(w,se){
+  const text=w.textContent,tok=openSheet(w,text,false);
+  $('#shSent').hidden=false;
+  const sheet=$('#sheet');sheet._speak=text;sheet._sent=se._s;
+  tr(text).then(r=>{if(tok===sheetTok)$('#shFa').textContent=r}).catch(()=>{if(tok===sheetTok)$('#shFa').textContent=T('trFail')});
+  w.scrollIntoView({block:'nearest'});
+}
+function lookupSent(se){
+  const s=se._s,tok=openSheet(se,s.text,true);
+  $('#shSent').hidden=true;
+  const sheet=$('#sheet');sheet._speak=s.text;sheet._sent=null;
+  tr(s.text).then(r=>{if(tok===sheetTok)$('#shFa').textContent=r}).catch(()=>{if(tok===sheetTok)$('#shFa').textContent=T('trFail')});
+}
+$('#passage').addEventListener('click',e=>{
+  const se=e.target.closest('.rs');if(!se)return;
+  if(mode==='word'){const w=e.target.closest('.rw');if(w)lookupWord(w,se)}
+  else lookupSent(se);
+});
+$('#shSpeak').onclick=()=>speak($('#sheet')._speak||'');
+$('#shClose').onclick=closeSheet;
+$('#shSent').onclick=()=>{
+  const s=$('#sheet')._sent;if(!s)return;
+  const tok=sheetTok;
+  $('#shCtx').hidden=false;$('#shCtxEn').textContent=s.text;$('#shCtxFa').textContent='…';
+  tr(s.text).then(r=>{if(tok===sheetTok)$('#shCtxFa').textContent=r}).catch(()=>{if(tok===sheetTok)$('#shCtxFa').textContent=T('trFail')});
+};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet()});
+
+/* translate all */
+function renderPtr(p){
+  const st=$('#style').value;
+  p.trEl.textContent=st==='sent'?p.sents.map(s=>s.tr||'…').join(' '):(p.tr||'…');
+  p.trEl.hidden=!allOn;
+}
+function setStatus(msg,retry){
+  const el=$('#status');el.textContent=msg||'';
+  if(retry){const b=document.createElement('button');b.className='mini';b.textContent=T('retry');b.onclick=ensureTr;el.append(b)}
+}
+async function ensureTr(){
+  if(!R)return;
+  const st=$('#style').value,jobs=[];
+  R.paras.forEach(p=>{
+    if(st==='para'){if(p.tr==null)jobs.push(async()=>{p.tr=await trLong(p.text);renderPtr(p)})}
+    else p.sents.forEach(s=>{if(s.tr==null)jobs.push(async()=>{s.tr=await gt(s.text);renderPtr(p)})});
+  });
+  R.paras.forEach(renderPtr);
+  if(!jobs.length){setStatus('');return}
+  setStatus(T('trWait'));
+  let fail=0;
+  await pool(jobs.map(j=>()=>j().catch(()=>{fail++})),3);
+  setStatus(fail?T('trFail'):'',!!fail);
+}
+$('#allBtn').onclick=()=>{
+  allOn=!allOn;
+  $('#allBtn').textContent=T(allOn?'hideAll':'trAll');$('#allBtn').classList.toggle('on',allOn);
+  if(allOn)ensureTr();else{R.paras.forEach(p=>p.trEl.hidden=true);setStatus('')}
+};
+$('#style').onchange=()=>{LS.set('rd-style',$('#style').value);if(allOn)ensureTr()};
+
+/* misc events */
+function setFs(n){fs=Math.min(28,Math.max(15,n));LS.set('rd-fs',fs);$('#passage').style.setProperty('--rfs',fs+'px')}
+$('#fMinus').onclick=()=>setFs(fs-1);
+$('#fPlus').onclick=()=>setFs(fs+1);
+$('#mWord').onclick=()=>setMode('word');
+$('#mSent').onclick=()=>setMode('sent');
+$('#editBtn').onclick=()=>{closeSheet();if(tts)speechSynthesis.cancel();$('#vRead').hidden=true;$('#vSetup').hidden=false;$('#view').scrollTop=0};
+$('#openBtn').onclick=open;
+$('#clearBtn').onclick=()=>{$('#src').value='';LS.set('rd-draft','');meter();$('#src').focus()};
+$('#src').addEventListener('input',()=>{LS.set('rd-draft',$('#src').value);meter()});
+$('#themeBtn').onclick=()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark');
+$('#langBtn').onclick=()=>setLang(LANG==='fa'?'en':'fa');
+window.addEventListener('pagehide',()=>{if(tts)speechSynthesis.cancel()});
+
+/* boot */
+setTheme(LS.get('ielts-theme',matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+$('#src').value=LS.get('rd-draft','');
+$('#style').value=LS.get('rd-style','sent');
+mode=LS.get('rd-mode','word')==='sent'?'sent':'word';
+$('#mWord').classList.toggle('on',mode==='word');$('#mSent').classList.toggle('on',mode==='sent');
+setLang(LS.get('ielts-lang','en')==='fa'?'fa':'en');
+})();
+</script>
+</body>
+</html>
