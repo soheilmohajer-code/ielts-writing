@@ -85,6 +85,9 @@ select,input[type=text]{padding:8px 10px;background:var(--sheet);color:var(--ink
 .btn:focus-visible,.icon-btn:focus-visible,.lang-btn:focus-visible,.mini:focus-visible,.fc:focus-visible,.ch:focus-visible,.home-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .msg{margin-top:12px;font-size:13.5px;color:var(--warn);background:var(--warn-bg);padding:8px 12px;border-radius:3px}
 .foot{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);text-align:center}
+.credit{display:block;margin-top:6px;font-weight:700;letter-spacing:.04em}
+.backrow{display:flex;justify-content:center;margin-top:18px}
+.backrow .btn{text-decoration:none}
 
 /* player */
 .player{position:sticky;top:0;z-index:5;background:var(--sheet);border:1px solid var(--line);border-radius:3px;padding:10px 12px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:26px 0 14px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
@@ -197,7 +200,8 @@ select,input[type=text]{padding:8px 10px;background:var(--sheet);color:var(--ink
     <div class="cards" id="cards"></div>
   </div>
 
-  <div class="foot" data-i18n="foot"></div>
+<div class="backrow"><a class="btn ghost" href="index.html" data-i18n="backHome">← Back to home</a></div>
+  <div class="foot"><span data-i18n="foot"></span><span class="credit">Built by zenithra / Soheil Mohajer &amp; Shayan Shamsvari</span></div>
 </div>
 </main>
 
@@ -211,7 +215,7 @@ const I18N={
 en:{brandSub:'Speaking practice',back:'Home',title:'Speaking practice',
  lead:'Paste an English text. It is split into speaking chunks, read aloud in an American voice, translated into Persian, and key words become flashcards.',
  lblText:'English text',ph:'Paste or type your text here…',lblStyle:'Translation style',sSent:'Sentence by sentence (formal)',sPara:'Whole paragraph (smoother)',lblKw:'Flashcards',
- build:'Prepare text',clear:'Clear',readAll:'Read all',pause:'Pause',resume:'Resume',stop:'Stop',speed:'Speed',voice:'Voice',
+   build:'Prepare text',clear:'Clear',backHome:'← Back to home',readAll:'Read all',pause:'Pause',resume:'Resume',stop:'Stop',speed:'Speed',voice:'Voice',
  gap:'Pause after each chunk (repeat aloud)',showFa:'Show Persian',kwTitle:'Key words',kwHint:'Tap a card to flip it.',addPh:'Add a word…',add:'Add',
  noVoice:'No American English voice was found on this device, so another English voice is used.',noTTS:'This browser cannot read text aloud.',
  trWait:'Translating…',trFail:'Translation failed (network or service limit).',retry:'Retry',empty:'Paste a text first.',
@@ -221,7 +225,7 @@ en:{brandSub:'Speaking practice',back:'Home',title:'Speaking practice',
 fa:{brandSub:'تمرین اسپیکینگ',back:'خانه',title:'تمرین اسپیکینگ',
  lead:'یه متن انگلیسی بچسبون. متن به تکه‌های مناسب گفتاری (با اسلش) تقسیم می‌شه، با لهجهٔ آمریکایی خونده می‌شه، ترجمهٔ فارسی می‌گیره و از کلمات مهمش فلش‌کارت ساخته می‌شه.',
  lblText:'متن انگلیسی',ph:'متن رو اینجا بچسبون یا تایپ کن…',lblStyle:'سبک ترجمه',sSent:'جمله‌به‌جمله (رسمی)',sPara:'کل پاراگراف (روان‌تر)',lblKw:'تعداد فلش‌کارت',
- build:'آماده‌سازی متن',clear:'پاک کردن',readAll:'خواندن',pause:'مکث',resume:'ادامه',stop:'توقف',speed:'سرعت',voice:'صدا',
+   build:'آماده‌سازی متن',clear:'پاک کردن',backHome:'← برگشت به خانه',readAll:'خواندن',pause:'مکث',resume:'ادامه',stop:'توقف',speed:'سرعت',voice:'صدا',
  gap:'بعد از هر تکه مکث کن (برای تکرار)',showFa:'نمایش ترجمه',kwTitle:'کلمات مهم',kwHint:'روی کارت بزن تا برگرده.',addPh:'اضافه کردن کلمه…',add:'افزودن',
  noVoice:'صدای انگلیسی آمریکایی روی این دستگاه پیدا نشد؛ از یه صدای انگلیسی دیگه استفاده می‌شه.',noTTS:'این مرورگر قابلیت خواندن متن رو نداره.',
  trWait:'در حال ترجمه…',trFail:'ترجمه انجام نشد (اینترنت یا محدودیت سرویس).',retry:'تلاش دوباره',empty:'اول یه متن وارد کن.',

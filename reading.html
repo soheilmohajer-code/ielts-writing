@@ -82,6 +82,9 @@ select{padding:9px 10px;background:var(--sheet);color:var(--ink);border:1px soli
 .btn:focus-visible,.icon-btn:focus-visible,.lang-btn:focus-visible,.mini:focus-visible,.home-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .msg{margin-top:12px;font-size:13.5px;color:var(--warn);background:var(--warn-bg);padding:8px 12px;border-radius:3px}
 .foot{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);text-align:center}
+.credit{display:block;margin-top:6px;font-weight:700;letter-spacing:.04em}
+.backrow{display:flex;justify-content:center;margin-top:18px}
+.backrow .btn{text-decoration:none}
 
 /* reader */
 .bar{position:sticky;top:0;z-index:5;background:var(--sheet);border:1px solid var(--line);border-radius:3px;padding:8px 10px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
@@ -176,7 +179,8 @@ select{padding:9px 10px;background:var(--sheet);color:var(--ink);border:1px soli
   <article class="passage" id="passage"></article>
 </section>
 
-<div class="foot" data-i18n="foot"></div>
+<div class="backrow"><a class="btn ghost" href="index.html" data-i18n="backHome">← Back to home</a></div>
+<div class="foot"><span data-i18n="foot"></span><span class="credit">Built by zenithra / Soheil Mohajer &amp; Shayan Shamsvari</span></div>
 </div>
 </main>
 
@@ -207,7 +211,7 @@ en:{brandSub:'Reading practice',back:'Home',title:'Reading practice',
  lead:'Paste an English text and read it here. Tap a word or a sentence to see its Persian translation, or translate the whole text at once.',
  lblText:'English text',ph:'Paste the reading passage here…',open:'Open reader',clear:'Clear',empty:'Paste a text first.',
  mWord:'Word',mSent:'Sentence',trAll:'Translate all',hideAll:'Hide translations',sSent:'Sentence by sentence (formal)',sPara:'Whole paragraph (smoother)',edit:'Edit text',
- hintWord:'Tap any word to see its meaning.',hintSent:'Tap any sentence to translate it.',
+  hintWord:'Tap any word to see its meaning.',hintSent:'Tap any sentence to translate it.',backHome:'← Back to home',
  listen:'Listen',sentTr:'Translate this sentence',close:'Close',
  trWait:'Translating…',trFail:'Translation failed (network or service limit).',retry:'Retry',words:'words',
  foot:'Translation comes from a free online service and may be imperfect, especially for single words without context.'},
@@ -215,7 +219,7 @@ fa:{brandSub:'تمرین ریدینگ',back:'خانه',title:'تمرین رید�
  lead:'یه متن انگلیسی بچسبون و همین‌جا بخونش. روی هر کلمه یا جمله بزنی ترجمهٔ فارسیش رو می‌بینی، یا کل متن رو یک‌جا ترجمه کن.',
  lblText:'متن انگلیسی',ph:'متن ریدینگ رو اینجا بچسبون…',open:'باز کردن متن',clear:'پاک کردن',empty:'اول یه متن وارد کن.',
  mWord:'کلمه',mSent:'جمله',trAll:'ترجمهٔ کل متن',hideAll:'پنهان کردن ترجمه',sSent:'جمله‌به‌جمله (رسمی)',sPara:'کل پاراگراف (روان‌تر)',edit:'ویرایش متن',
- hintWord:'روی هر کلمه بزن تا معنیش رو ببینی.',hintSent:'روی هر جمله بزن تا ترجمه بشه.',
+  hintWord:'روی هر کلمه بزن تا معنیش رو ببینی.',hintSent:'روی هر جمله بزن تا ترجمه بشه.',backHome:'← برگشت به خانه',
  listen:'شنیدن',sentTr:'ترجمهٔ این جمله',close:'بستن',
  trWait:'در حال ترجمه…',trFail:'ترجمه انجام نشد (اینترنت یا محدودیت سرویس).',retry:'تلاش دوباره',words:'کلمه',
  foot:'ترجمه از یه سرویس آنلاین رایگانه و ممکنه بی‌نقص نباشه، مخصوصاً برای کلمه‌های تکی بدون متن اطرافشون.'}

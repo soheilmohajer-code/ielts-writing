@@ -90,6 +90,9 @@ input[type=range]{accent-color:var(--accent);width:150px}
 .msg{margin-top:12px;font-size:13.5px;color:var(--warn);background:var(--warn-bg);padding:8px 12px;border-radius:3px}
 .status{margin:12px 0;padding:10px 12px;background:var(--sheet2);border:1px solid var(--line);border-inline-start:4px solid var(--accent);border-radius:3px}
 .foot{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);text-align:center}
+.credit{display:block;margin-top:6px;font-weight:700;letter-spacing:.04em}
+.backrow{display:flex;justify-content:center;margin-top:18px}
+.backrow .btn{text-decoration:none}
 
 /* transcript + dictation */
 .tr-list{direction:ltr;text-align:left;margin-top:14px}
@@ -222,7 +225,8 @@ input[type=range]{accent-color:var(--accent);width:150px}
   </div>
 </section>
 
-<div class="foot" data-i18n="foot"></div>
+<div class="backrow"><a class="btn ghost" href="index.html" data-i18n="backHome">← Back to home</a></div>
+<div class="foot"><span data-i18n="foot"></span><span class="credit">Built by zenithra / Soheil Mohajer &amp; Shayan Shamsvari</span></div>
 </div>
 </main>
 
@@ -240,7 +244,7 @@ en:{brandSub:'Listening practice',back:'Home',title:'Listening practice',
  start:'Start',test:'Test sound',clear:'Clear',
  noVoice:'No voice for this accent was found on this device, so another English voice is used.',noTTS:'This browser cannot read text aloud.',empty:'Paste a text first.',
  exTitle:'Listening test',exReady:'Press Play. The audio plays once and cannot be repeated.',exPlaying:'Playing… it cannot be replayed, so take notes.',exDone:'Finished. You can now show the transcript.',
- play:'Play (once)',played:'Played',notes:'Your notes',notesPh:'Write what you hear…',showTr:'Show transcript',setup:'Change text / settings',again:'Try again',
+ play:'Play (once)',played:'Played',notes:'Your notes',notesPh:'Write what you hear…',showTr:'Show transcript',setup:'Change text / settings',again:'Try again',backHome:'← Back to home',
  dTitle:'Dictation',dProg:'Sentence',of:'of',dPlay:'Play',dSlow:'Slow',dPlays:'plays',dPh:'Type what you hear…',check:'Check',next:'Next',finish:'Finish',
  accL:'accuracy',missL:'missed',extraL:'extra',legend:'Red = missed word · Struck through = extra word',
  sumTitle:'Result',sumAvg:'Average accuracy',sumExact:'Sentences exact',sumPlays:'Total plays',restart:'Restart',retryS:'Retry',weakT:'Weakest sentences',
@@ -253,7 +257,7 @@ fa:{brandSub:'تمرین لیسنینگ',back:'خانه',title:'تمرین لی�
  start:'شروع',test:'تست صدا',clear:'پاک کردن',
  noVoice:'برای این لهجه صدایی روی این دستگاه پیدا نشد؛ از یه صدای انگلیسی دیگه استفاده می‌شه.',noTTS:'این مرورگر قابلیت خواندن متن رو نداره.',empty:'اول یه متن وارد کن.',
  exTitle:'آزمون لیسنینگ',exReady:'روی پخش بزن. صدا فقط یک‌بار پخش می‌شه و تکرار نداره.',exPlaying:'در حال پخش… تکرار نداره، پس یادداشت بردار.',exDone:'تموم شد. حالا می‌تونی متن رو ببینی.',
- play:'پخش (فقط یک‌بار)',played:'پخش شد',notes:'یادداشت‌های تو',notesPh:'اون چیزی که می‌شنوی رو بنویس…',showTr:'نمایش متن',setup:'تغییر متن / تنظیمات',again:'تلاش دوباره',
+ play:'پخش (فقط یک‌بار)',played:'پخش شد',notes:'یادداشت‌های تو',notesPh:'اون چیزی که می‌شنوی رو بنویس…',showTr:'نمایش متن',setup:'تغییر متن / تنظیمات',again:'تلاش دوباره',backHome:'← برگشت به خانه',
  dTitle:'دیکته',dProg:'جملهٔ',of:'از',dPlay:'پخش',dSlow:'آهسته',dPlays:'بار پخش',dPh:'اون چیزی که می‌شنوی رو تایپ کن…',check:'بررسی',next:'بعدی',finish:'پایان',
  accL:'دقت',missL:'جاافتاده',extraL:'اضافه',legend:'قرمز = کلمهٔ جاافتاده · خط‌خورده = کلمهٔ اضافه',
  sumTitle:'نتیجه',sumAvg:'میانگین دقت',sumExact:'جملهٔ بی‌نقص',sumPlays:'مجموع پخش‌ها',restart:'شروع دوباره',retryS:'تکرار',weakT:'ضعیف‌ترین جمله‌ها',

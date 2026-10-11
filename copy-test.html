@@ -334,6 +334,7 @@ html[lang="fa"] .hint{line-height:1.9}
     <div class="actions">
       <button class="btn primary" id="startBtn" disabled data-i18n="start">Start exam</button>
       <button class="btn ghost" id="testSound" data-i18n="sound">Play alert sound</button>
+      <a class="btn ghost backHome" href="index.html" style="text-decoration:none">← Back to home</a>
     </div>
     </div>
     <section class="hist" id="histPanel" aria-label="Record">
@@ -371,6 +372,7 @@ html[lang="fa"] .hint{line-height:1.9}
     <div class="actions">
       <button class="btn primary" id="memStart" data-i18n="memStart">I'm ready — hide it and start</button>
       <button class="btn ghost" id="memBack" data-i18n="memBack">Back</button>
+      <a class="btn ghost backHome" href="index.html" style="text-decoration:none">← Back to home</a>
     </div>
   </div>
 </main>
@@ -413,6 +415,7 @@ html[lang="fa"] .hint{line-height:1.9}
       <button class="btn ghost" id="retryPara" hidden>Retry weakest paragraph</button>
       <button class="btn ghost" id="saveBank" data-i18n="bankSave">Save this passage</button>
       <button class="btn ghost" id="fresh" data-i18n="fresh">Use a new passage</button>
+      <a class="btn ghost backHome" href="index.html" style="text-decoration:none">← Back to home</a>
     </div>
   </div>
 </main>
@@ -487,6 +490,7 @@ function applyI18n(){
   document.querySelectorAll('[data-i18n-title]').forEach(el=>{el.title=T(el.dataset.i18nTitle)});
   $('#langTxt').textContent=S.lang==='fa'?'EN':'FA';
   const hl=$('#homeLink');if(hl)hl.textContent=S.lang==='fa'?'خانه':'Home';
+  document.querySelectorAll('.backHome').forEach(el=>{el.textContent=S.lang==='fa'?'← برگشت به خانه':'← Back to home'});
   refreshMeta();renderHistory();renderBank();
   if(S.phase==='exam'){updateParaUI();tickNote()}
   else if(S.phase==='result'&&S.source)enterResult();
