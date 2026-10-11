@@ -42,8 +42,14 @@ html[lang="fa"] h1,html[lang="fa"] h2{font-weight:800}
 .lead{color:var(--muted);margin:0 0 28px;max-width:60ch}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media (max-width:640px){.choices{grid-template-columns:1fr}}
-.choice{display:flex;flex-direction:column;gap:8px;background:var(--sheet);border:1px solid var(--line);border-inline-start:4px solid var(--accent);border-radius:4px;padding:24px;color:inherit;text-decoration:none}
-.choice:hover{border-color:var(--accent);background:var(--sheet2)}
+.choice{--ca:var(--accent);display:flex;flex-direction:column;gap:8px;background:var(--sheet);border:1px solid var(--line);border-inline-start:4px solid var(--ca);border-radius:4px;padding:24px;color:inherit;text-decoration:none}
+.choice:hover{border-color:var(--ca);background:var(--sheet2)}
+.choice.l{--ca:#2E7BC4}
+.choice.r{--ca:#1E8E7A}
+.choice.w{--ca:#7A5BC0}
+.choice.s{--ca:#C07A1A}
+.chead{display:flex;align-items:center;gap:12px}
+.ic{width:44px;height:44px;flex:none;border-radius:10px;display:grid;place-items:center;font-size:24px;line-height:1;background:var(--sheet2);border:1px solid var(--ca)}
 .choice:focus-visible,.icon-btn:focus-visible,.lang-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .choice h2{font-size:22px;margin:0}
 .choice p{margin:0;color:var(--muted)}
@@ -67,23 +73,23 @@ html[lang="fa"] h1,html[lang="fa"] h2{font-weight:800}
   <h1 data-i18n="h1">Choose a practice section</h1>
   <p class="lead" data-i18n="lead"></p>
   <div class="choices">
-    <a class="choice" href="listening.html">
-      <h2 data-i18n="lTitle">Listening</h2>
+    <a class="choice l" href="listening.html">
+      <div class="chead"><span class="ic" aria-hidden="true">🎧</span><h2 data-i18n="lTitle">Listening</h2></div>
       <p data-i18n="lText"></p>
       <span class="go" data-i18n="go">Start</span>
     </a>
-    <a class="choice" href="reading.html">
-      <h2 data-i18n="rTitle">Reading</h2>
+    <a class="choice r" href="reading.html">
+      <div class="chead"><span class="ic" aria-hidden="true">📖</span><h2 data-i18n="rTitle">Reading</h2></div>
       <p data-i18n="rText"></p>
       <span class="go" data-i18n="go">Start</span>
     </a>
-    <a class="choice" href="copy-test.html">
-      <h2 data-i18n="wTitle">Writing</h2>
+    <a class="choice w" href="copy-test.html">
+      <div class="chead"><span class="ic" aria-hidden="true">✍️</span><h2 data-i18n="wTitle">Writing</h2></div>
       <p data-i18n="wText"></p>
       <span class="go" data-i18n="go">Start</span>
     </a>
-    <a class="choice" href="speaking.html">
-      <h2 data-i18n="sTitle">Speaking</h2>
+    <a class="choice s" href="speaking.html">
+      <div class="chead"><span class="ic" aria-hidden="true">🎤</span><h2 data-i18n="sTitle">Speaking</h2></div>
       <p data-i18n="sText"></p>
       <span class="go" data-i18n="go">Start</span>
     </a>
